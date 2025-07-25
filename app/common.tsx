@@ -135,7 +135,7 @@ export const TextCardDataList = [
             "ECC Bench 为可为AI for Humanities的多模态模型测评、智能体训练与知识生成提供坚实支撑，重塑人文社科智能研究的评估标准。"
         ],
         "url": "",
-        "button_text": "查看"
+        "button_text": "了解更多"
     },
     {
         "title1": "ECC Model",
@@ -145,7 +145,7 @@ export const TextCardDataList = [
             "模型创新性提出MCTS-GRPO 多模态强化训练框架，首次将人文学科研究范式深度融入大模型训练，使模型具备文献检索、史料识读、事实呈现、特征描述、信度考据与分析推理等多项核心科研能力，满足大多数科研需求。"
         ],
         "url": "",
-        "button_text": "试用"
+        "button_text": "了解更多"
     },
     {
         "title1": "ECC Agent",
@@ -154,7 +154,7 @@ export const TextCardDataList = [
             "ECC Agent 是专为早期中华文明研究打造的多学科、多场景人工智能代理体系，集成持续对话、任务拆解、多轮推理与自主规划等关键能力，能够实现精准理解与智能响应。通过构建可追溯、可验证的知识生成机制，确保模型输出依托可靠来源与完整证据链，切实满足考古、历史、古文字等领域的科研要求。"
         ],
         "url": "",
-        "button_text": "试用"
+        "button_text": "了解更多"
     }
 ]
 
@@ -209,10 +209,26 @@ export function SidebarCard({ index, spanNumber }: { index: number, spanNumber: 
         'from-violet-50 to-purple-100 border-violet-200'
     ]
 
+    const getClickHandler = () => {
+        if (index === 0) {
+            // 专家团队 - 跳转到team页面
+            return () => window.location.href = '/team'
+        } else if (index === 1) {
+            // 贡献者名单 - 跳转到team页面的其他贡献者部分
+            return () => window.location.href = '/team#contributors'
+        }
+        return undefined
+    }
+
+    const isClickable = index === 0 || index === 1
+
     return (
         <>
             {/* Expert Team */}
-            <div className={`${spanNumber === 5 ? 'col-span-5' : 'col-span-3'} p-8 rounded-2xl bg-gradient-to-br ${cardColors[index]} border hover:shadow-2xl hover:scale-102 transition-all duration-500 group`}>
+            <div 
+                className={`${spanNumber === 5 ? 'col-span-5' : 'col-span-3'} p-8 rounded-2xl bg-gradient-to-br ${cardColors[index]} border hover:shadow-2xl hover:scale-102 transition-all duration-500 group ${isClickable ? 'cursor-pointer' : ''}`}
+                onClick={getClickHandler()}
+            >
                 <div className="flex items-start mb-6">
                     <div>
                         <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">{card[0]}</h3>

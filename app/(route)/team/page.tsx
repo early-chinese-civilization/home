@@ -191,7 +191,7 @@ export default function Home() {
                 </div>
                 
                 {/* 其他贡献者部分 */}
-                <div className="text-center">
+                <div id="contributors" className="text-center">
                     <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
                         <div className="inline-block mb-6">
                             <span className="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full text-sm font-semibold">🤝 Contributors</span>
