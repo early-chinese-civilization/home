@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repo = process.env.GITHUB_REPOSITORY;
+const repo = process.env.GITHUB_REPOSITORY || "";
 let assetPrefix = "";
 let basePath = "";
 
