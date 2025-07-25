@@ -20,7 +20,10 @@ export function Nav() {
                 <div className="flex justify-between items-center">
                     {/* Logo and Site Name */}
                     <div className="flex items-center space-x-4">
-                        <a href="/" className="text-gray-900 font-medium">SAIS</a>
+                        <a href="/" className="text-gray-900 font-medium leading-tight">
+                            <div className="text-sm font-bold">早期中华文明多模态大模型</div>
+                            <div className="text-xs text-gray-600">Early Chinese Civilization Multimodal Model</div>
+                        </a>
                     </div>
 
                     {/* Navigation Links - Desktop */}

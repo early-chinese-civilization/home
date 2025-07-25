@@ -1,0 +1,98 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b3e5fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f3e5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e1bee7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc02;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f1f8e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dcedc8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 原始数据 -->
+  <rect x="20" y="40" width="120" height="80" rx="8" fill="url(#grad1)" stroke="#0277bd" stroke-width="2"/>
+  <text x="80" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0277bd">原始数据</text>
+  <text x="80" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#0277bd">书籍</text>
+  <text x="80" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#0277bd">期刊</text>
+  <text x="80" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#0277bd">考古报告</text>
+  <text x="80" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#0277bd">网页图文</text>
+  
+  <!-- 箭头1 -->
+  <path d="M 150 80 L 180 80" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="165" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">重点过滤</text>
+  <text x="165" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">交叉去重</text>
+  <text x="165" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">分类整理</text>
+  
+  <!-- 文献归档 -->
+  <rect x="190" y="40" width="120" height="80" rx="8" fill="url(#grad2)" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="250" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7b1fa2">文献归档</text>
+  <text x="250" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2">文献数字化</text>
+  <text x="250" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2">1. 领域学科分类</text>
+  <text x="250" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2">2. 历史时期分类</text>
+  <text x="250" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2">3. 学术价值分类</text>
+  
+  <!-- 箭头2 -->
+  <path d="M 320 80 L 350 80" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="335" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">知识提取</text>
+  
+  <!-- 文本知识图文知识 -->
+  <ellipse cx="410" cy="80" rx="60" ry="40" fill="url(#grad5)" stroke="#388e3c" stroke-width="2"/>
+  <text x="410" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#388e3c">文本知识</text>
+  <text x="410" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#388e3c">图文知识</text>
+  
+  <!-- 古文字开源数据库 -->
+  <ellipse cx="250" cy="180" rx="70" ry="30" fill="url(#grad4)" stroke="#f57c00" stroke-width="2"/>
+  <text x="250" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f57c00">古文字</text>
+  <text x="250" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f57c00">开源数据库</text>
+  
+  <!-- 箭头3 -->
+  <path d="M 320 180 L 350 140" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="340" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">格式转换</text>
+  
+  <!-- 箭头4 -->
+  <path d="M 480 80 L 520 80" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- LLM数据合成 -->
+  <rect x="530" y="50" width="80" height="60" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="570" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1976d2">LLM数据合成</text>
+  <polygon points="520,70 530,80 520,90" fill="#1976d2"/>
+  
+  <!-- 专家标注 -->
+  <circle cx="680" cy="50" r="25" fill="#f5f5f5" stroke="#424242" stroke-width="2"/>
+  <text x="680" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#424242">专家标注</text>
+  <text x="680" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#424242">人工审核</text>
+  
+  <!-- 箭头5 -->
+  <path d="M 620 80 L 650 80" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- dataset -->
+  <rect x="660" y="120" width="100" height="80" rx="8" fill="#ffffff" stroke="#424242" stroke-width="2"/>
+  <text x="710" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#424242">dataset</text>
+  <text x="710" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• 选择题</text>
+  <text x="710" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• 判断题</text>
+  <text x="710" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• 简答题</text>
+  <text x="710" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#424242">• 图文理解题</text>
+  
+  <!-- 箭头6 -->
+  <path d="M 680 80 L 710 120" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+</svg>
