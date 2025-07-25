@@ -1,70 +1,7 @@
 "use client";
-import { Footer, Nav } from "@/app/common";
+import { Footer, Nav, PicCard, picCardText } from "@/app/common";
 import { useState } from "react";
 
-const picCardText = [
-    {
-        "p1": "ECC Agent X 历史地理研究中心",
-        "p2": "中国地方志资料建设",
-        "p3": "中国历史地理大模型",
-    },
-    {
-        "p1": "ECC Agent X 出土文献与古文字研究中心",
-        "p2": "中国古文字多模态数据集",
-        "p3": "中国古文字知识图谱",
-    },
-    {
-        "p1": "ECC Agent X 现代语言学研究院",
-        "p2": "东亚语言 / 方言数据集",
-        "p3": "社会结构的模拟孪生系统",
-    },
-    {
-        "p1": "ECC Agent X 文物与博物馆学系",
-        "p2": "中国考古报告语料建设",
-        "p3": "考古报告生成Agent",
-    },
-    {
-        "p1": "ECC Agent X 中国古籍保护研究院",
-        "p2": "上海地方志语料建设",
-        "p3": "",
-    },
-    {
-        "p1": "更多合作>>>",
-        "p2": "",
-        "p3": "",
-    }
-]
-
-
-
-
-
-export function PicCard({index, onMoreCooperationClick}:{index:number, onMoreCooperationClick?: () => void}) {
-    let picText = picCardText[index]
-    const isMoreCooperation = picText.p1 === "更多合作>>>"
-    
-    return (
-        <>
-            <div className={isMoreCooperation ? "cursor-pointer" : ""}>
-                <div 
-                    className="bg-cover bg-center h-48 rounded-lg overflow-hidden mb-4" 
-                    style={{ backgroundImage: `url(/agent_pics/${index}.jpg)` }}
-                    onClick={isMoreCooperation ? onMoreCooperationClick : undefined}
-                ></div>
-                <div className="text-gray-800">
-                    <h3 
-                        className={`text-base font-bold mb-2 whitespace-nowrap ${isMoreCooperation ? 'cursor-pointer hover:text-blue-600 transition-colors' : ''}`}
-                        onClick={isMoreCooperation ? onMoreCooperationClick : undefined}
-                    >
-                        {picText.p1}
-                    </h3>
-                    <p className="text-sm mb-1">{picText.p2}</p>
-                    <p className="text-sm">{picText.p3}</p>
-                </div>
-            </div>
-        </>
-    )
-}
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
