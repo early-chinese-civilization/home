@@ -22,6 +22,7 @@ jobs:
           npm install pnpm -g
           pnpm i
           pnpm run build
+          touch out/.nojekyll
         env:
           # TODO: change repo name
           REPO: home
