@@ -117,6 +117,7 @@ export default function Home() {
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">贡献者名单</h3>
                     <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
                       <Link href="/team#contributors"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
+                    
                     </div>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       阅读我们基于本项目撰写的
