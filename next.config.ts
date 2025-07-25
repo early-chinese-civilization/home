@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   basePath,
   assetPrefix,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  }
 
 };
 

@@ -1,5 +1,6 @@
 "use client";
-import { Footer, Nav, SidebarCard, TextCard, TextCardDataList } from "@/app/common";
+import { Footer, Nav, TextCard, TextCardDataList } from "@/app/common";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -93,9 +94,71 @@ export default function Home() {
             <p className="text-xl text-gray-600">携手共建人文智能研究的未来</p>
           </div>
           <div className="grid grid-cols-8 gap-8">
-            {[5, 3, 3, 5].map((item, index) => (
-              <SidebarCard key={index} index={index} spanNumber={item}></SidebarCard>
-            ))}
+
+              <div className="col-span-5 p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-100 border-amber-200 border hover:shadow-2xl hover:scale-102 transition-all duration-500 group cursor-pointer">
+                <div className="flex items-start mb-6">
+                  <div>
+                    <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">专家团队</h3>
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/team">→</Link></span>
+                    </div>
+                    <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                      本项目由专家指导委员会领衔
+                    </p>
+                    <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
+                      AI科学家、专业领域学者、工程技术人员联合开发
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={"col-span-3 p-8 rounded-2xl bg-gradient-to-br from-rose-50 to-pink-100 border-rose-200 to-pink-500 border hover:shadow-2xl hover:scale-102 transition-all duration-500 group cursor-pointer"}>
+                <div className="flex items-start mb-6">
+                  <div>
+                    <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">贡献者名单</h3>
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/team#contributors">→</Link></span>
+                    </div>
+                    <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                      阅读我们基于本项目撰写的
+                    </p>
+                    <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
+                      向所有参与人员致谢
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={"col-span-3 p-8 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-100 border-cyan-200 border hover:shadow-2xl hover:scale-102 transition-all duration-500 group cursor-pointer"}>
+                <div className="flex items-start mb-6">
+                  <div>
+                    <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">阅读文章</h3>
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/">→</Link></span>
+                    </div>
+                    <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                      阅读我们基于本项目撰写的
+                    </p>
+                    <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
+                      AI for Humanity 主题文章
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={"col-span-5 p-8 rounded-2xl bg-gradient-to-br from-violet-50 to-purple-100 border-violet-200 border hover:shadow-2xl hover:scale-102 transition-all duration-500 group cursor-pointer"}>
+                <div className="flex items-start mb-6">
+                  <div>
+                    <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">加入我们，推动知识与技术的共生演进</h3>
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/team">→</Link></span>
+                    </div>
+                    <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                      成为我们的领域专家
+                    </p>
+                    <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
+                      共同引领人工智能在文明研究中的深度突破
+                    </p>
+                  </div>
+                </div>
+              </div>
           </div>
         </section>
       </main>

@@ -65,7 +65,7 @@ export default function Home() {
                                         
                                         {/* 真实的历史分期分布图 */}
                                         <div className="bg-white rounded-lg p-3 border border-green-200">
-                                            <Image src="/history_periods_chart.svg" alt="历史分期分布图" className="w-full h-auto" width={400} height={300} />
+                                            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/history_periods_chart.svg`} alt="历史分期分布图" className="w-full h-auto" width={400} height={300} />
                                         </div>
                                         
                                         <p className="text-gray-700 text-sm mt-4 leading-relaxed">
@@ -385,7 +385,7 @@ export default function Home() {
                                     {/* Image */}
                                     <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
                                         <h3 className="text-lg font-bold text-gray-800 mb-4">考古文物图片</h3>
-                                        <Image src="/archaeological_artifacts.svg" alt="考古文物" className="w-full h-auto rounded-lg border border-gray-200" width={500} height={400} />
+                                        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/archaeological_artifacts.svg`} alt="考古文物" className="w-full h-auto rounded-lg border border-gray-200" width={500} height={400} />
                                         <p className="text-sm text-gray-500 mt-3 italic">
                                             附图《华夏考古》1989年第4期《登封市新密新郑时代早期文明文化遗存的调查与试掘》
                                         </p>

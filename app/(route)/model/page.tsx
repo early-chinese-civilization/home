@@ -86,7 +86,7 @@ export default function Home() {
                             
                             {/* 架构图 */}
                             <div className="bg-white rounded-xl p-6 border border-purple-200 shadow-lg">
-                                <Image src="/fusion.png" alt="ECC模型架构图" className="w-full h-auto mx-auto" width={800} height={600} />
+                                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/fusion.png`} alt="ECC模型架构图" className="w-full h-auto mx-auto" width={800} height={600} />
                             </div>
                             
                         </div>
