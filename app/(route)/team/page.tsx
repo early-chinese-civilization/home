@@ -10,35 +10,35 @@ export default function Home() {
             name: "陈志敏",
             title1: "复旦大学副校长",
             title2: "教育部长江特聘教授",
-            avatar: "/processors/chenzhimin.PNG"
+            avatar: "/processors/chenzhimin.svg"
         },
         {
             role: "总协调人",
             name: "吴力波",
             title1: "复旦大学数据学院副院长",
             title2: "教育部长江特聘教授",
-            avatar: "/processors/wulibo.PNG"
+            avatar: "/processors/wulibo.svg"
         },
         {
             role: "首席科学家",
             name: "漆远",
             title1: "复旦大学人工智能创新与产业研究院院长",
             title2: "上海科学智能研究院研究院长",
-            avatar: "/processors/qixuan.PNG"
+            avatar: "/processors/qixuan.svg"
         },
         {
             role: "首席科学家",
             name: "刘钊",
             title1: "复旦大学出土文献与古文字研究中心主任",
             title2: "马王堆文化研究院名誉院长",
-            avatar: "/processors/liuzhao.png"
+            avatar: "/processors/liuzhao.svg"
         },
         {
             role: "首席科学家",
             name: "陈思和",
             title1: "复旦大学资深教授",
             title2: "",
-            avatar: "/processors/chensihe.png"
+            avatar: "/processors/chensihe.svg"
         },
 
 
@@ -99,7 +99,7 @@ export default function Home() {
                                         <div className="w-20 h-20 bg-gradient-to-br from-white to-gray-100 rounded-full mx-auto shadow-lg border-4 border-white group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 overflow-hidden">
                                             {expert.avatar ? (
                                                 <Image 
-                                                    src={process.env.NEXT_PUBLIC_BASE_PATH + expert.avatar} 
+                                                    src={process.env.NEXT_PUBLIC_BASE_PATH + expert.avatar}
                                                     alt={expert.name}
                                                     width={80}
                                                     height={80}
