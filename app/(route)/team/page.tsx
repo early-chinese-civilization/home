@@ -1,6 +1,5 @@
 "use client";
 import { Footer, Nav } from "@/app/common";
-import { useState } from "react";
 
 export default function Home() {
     // 所有专家数据
@@ -35,54 +34,11 @@ export default function Home() {
             title1: "复旦大学资深教授",
             title2: ""
         },
-        {
-            role: "AI科学家",
-            name: "朱思明",
-            title1: "复旦大学，上海科学智能研究院",
-            title2: ""
-        },
-        {
-            role: "AI科学家",
-            name: "陈保友",
-            title1: "上海科学智能研究院",
-            title2: ""
-        },
-        {
-            role: "领域专家",
-            name: "文少卿",
-            title1: "复旦大学",
-            title2: ""
-        },
-        {
-            role: "领域专家",
-            name: "张梦翰",
-            title1: "复旦大学",
-            title2: ""
-        },
-        {
-            role: "领域专家",
-            name: "张兴旺",
-            title1: "上海科学智能研究院",
-            title2: ""
-        }
+
+
     ];
 
-    const [currentPage, setCurrentPage] = useState(0);
-    const expertsPerPage = 5;
-    const totalPages = Math.ceil(allExperts.length / expertsPerPage);
 
-    const getCurrentExperts = () => {
-        const startIndex = currentPage * expertsPerPage;
-        return allExperts.slice(startIndex, startIndex + expertsPerPage);
-    };
-
-    const goToPrevPage = () => {
-        setCurrentPage(prev => prev > 0 ? prev - 1 : totalPages - 1);
-    };
-
-    const goToNextPage = () => {
-        setCurrentPage(prev => prev < totalPages - 1 ? prev + 1 : 0);
-    };
 
     const getRoleColor = (role: string) => {
         const colors = {
@@ -119,20 +75,12 @@ export default function Home() {
                 </div>
                 
                 {/* 专家信息容器 */}
-                <div className="relative grid grid-cols-10 gap-4 items-center mb-20">
-                    {/* 左箭头 */}
-                    <button 
-                        onClick={goToPrevPage}
-                        className="col-span-1 flex items-center justify-center h-full bg-white/60 backdrop-blur-sm rounded-2xl p-4 text-gray-600 hover:text-blue-600 hover:bg-white/80 text-3xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl border border-white/50"
-                    >
-                        ≪
-                    </button>
-                    
+                <div className="relative mb-20">
                     {/* 专家展示容器 */}
-                    <div className="col-span-8 bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
-                        {/* 专家网格 - 每页显示5个 */}
-                        <div className="grid grid-cols-5 gap-8">
-                            {getCurrentExperts().map((expert, index) => (
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
+                        {/* 专家网格 - 显示所有专家 */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                            {allExperts.map((expert, index) => (
                                 <div key={index} className="text-center group">
                                     <div className="mb-4">
                                         <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${getRoleColor(expert.role)} text-white rounded-full text-xs font-semibold shadow-lg`}>
@@ -147,7 +95,6 @@ export default function Home() {
                                                 <span className="text-2xl font-bold text-gray-600">{expert.name.charAt(0)}</span>
                                             </div>
                                         </div>
-
                                     </div>
                                     <h3 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">{expert.name}</h3>
                                     <p className="text-xs text-gray-600 mb-1 leading-tight break-words">{expert.title1}</p>
@@ -155,36 +102,12 @@ export default function Home() {
                                 </div>
                             ))}
                         </div>
-                        
-                        {/* 页面指示器 */}
-                        <div className="flex justify-center mt-8 space-x-2">
-                            {Array.from({ length: totalPages }, (_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setCurrentPage(i)}
-                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                        i === currentPage 
-                                            ? 'bg-gradient-to-r from-blue-500 to-purple-500 scale-125' 
-                                            : 'bg-gray-300 hover:bg-gray-400'
-                                    }`}
-                                />
-                            ))}
-                        </div>
                     </div>
-
-                    {/* 右箭头 */}
-                    <button 
-                        onClick={goToNextPage}
-                        className="col-span-1 flex items-center justify-center h-full bg-white/60 backdrop-blur-sm rounded-2xl p-4 text-gray-600 hover:text-blue-600 hover:bg-white/80 text-3xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl border border-white/50"
-                    >
-                        ≫
-                    </button>
                 </div>
                 
                 {/* 团队分类卡片 */}
-                <div className="grid grid-cols-10 gap-4 mb-20 items-center">
-                    <div className="col-span-1"></div>
-                    <div className="col-span-8">
+                <div className="mb-20">
+                    <div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* 领域专家卡片 */}
                             <div className="group bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
@@ -255,7 +178,6 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-1"></div>
                 </div>
                 
                 {/* 其他贡献者部分 */}

@@ -1,5 +1,6 @@
 "use client";
 import { Footer, Nav } from "@/app/common";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -15,7 +16,7 @@ export default function Home() {
                         </h1>
                         <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
                             <span className="font-semibold text-blue-800">全球首创：</span>
-                            聚焦早期中华文明（旧石器至西汉）的万题级研究导向评测集
+                            聚焦早期中华文明的万题级研究导向评测集
                         </p>
                     </div>
 
@@ -64,11 +65,11 @@ export default function Home() {
                                         
                                         {/* 真实的历史分期分布图 */}
                                         <div className="bg-white rounded-lg p-3 border border-green-200">
-                                            <img src="/history_periods_chart.svg" alt="历史分期分布图" className="w-full h-auto"/>
+                                            <Image src="/history_periods_chart.svg" alt="历史分期分布图" className="w-full h-auto" width={400} height={300} />
                                         </div>
                                         
                                         <p className="text-gray-700 text-sm mt-4 leading-relaxed">
-                                            三维分层架构体系：独创"学科领域 × 问题类型 × 研究场景"三维设计体系，实现精准、多维度能力评估。
+                                            {`三维分层架构体系：独创\"学科领域 × 问题类型 × 研究场景\"三维设计体系，实现精准、多维度能力评估。`}
                                         </p>
                                     </div>
                                     
@@ -323,15 +324,12 @@ export default function Home() {
                                         </p>
                                         <div className="space-y-3">
                                             <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-blue-500 mr-3">📚</span>
                                                 <span className="text-gray-700">基于专业研究文献与学术期刊</span>
                                             </div>
                                             <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-blue-500 mr-3">🗄️</span>
                                                 <span className="text-gray-700">依托相关领域权威数据库</span>
                                             </div>
                                             <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-blue-500 mr-3">🏛️</span>
                                                 <span className="text-gray-700">整合考古报告与文物资料</span>
                                             </div>
                                         </div>
@@ -347,16 +345,13 @@ export default function Home() {
                                         </p>
                                         <div className="space-y-3">
                                             <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-emerald-500 mr-3">👨‍🎓</span>
-                                                <span className="text-gray-700">专业人士多层标注与审核</span>
+                                                <span className="text-gray-700">专业人士对测评题进行多层标注</span>
                                             </div>
                                             <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-emerald-500 mr-3">📏</span>
-                                                <span className="text-gray-700">18+标准维度精细化把控</span>
+                                                <span className="text-gray-700">18+标签维度细粒度把控测评题专业性</span>
                                             </div>
                                             <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-emerald-500 mr-3">🔄</span>
-                                                <span className="text-gray-700">双重复审机制确保可靠性</span>
+                                                <span className="text-gray-700">质检、验收双重复审机制确保测评题可靠性</span>
                                             </div>
                                         </div>
                                     </div>
@@ -390,7 +385,7 @@ export default function Home() {
                                     {/* Image */}
                                     <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
                                         <h3 className="text-lg font-bold text-gray-800 mb-4">考古文物图片</h3>
-                                        <img src="/archaeological_artifacts.svg" alt="考古文物" className="w-full h-auto rounded-lg border border-gray-200"/>
+                                        <Image src="/archaeological_artifacts.svg" alt="考古文物" className="w-full h-auto rounded-lg border border-gray-200" width={500} height={400} />
                                         <p className="text-sm text-gray-500 mt-3 italic">
                                             附图《华夏考古》1989年第4期《登封市新密新郑时代早期文明文化遗存的调查与试掘》
                                         </p>
@@ -439,9 +434,101 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
+                        
+                        {/* 测评功能模块 */}
+                        <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6">
+                                <h2 className="text-2xl font-bold text-white flex items-center">
+                                    测评功能模块
+                                </h2>
+                            </div>
+                            <div className="p-8">
+                                <div className="grid md:grid-cols-3 gap-8">
+                                    {/* 自测评数据下载 */}
+                                    <div className="group relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                        <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                                            <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="mb-6">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-blue-800 mb-3">自测评数据下载</h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6">
+                                                获取完整的测评数据集，包括题目、答案和评分标准，支持多种格式下载。
+                                            </p>
+                                        </div>
+                                        <div className="text-center">
+                                            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all cursor-not-allowed opacity-60">
+                                                <span className="mr-2">📥</span>
+                                                <span>敬请期待</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* 测评提交表单 */}
+                                    <div className="group relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                        <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                                            <svg className="w-8 h-8 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="mb-6">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-emerald-800 mb-3">测评提交表单</h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6">
+                                                提交您的模型测评结果，支持多种格式上传，自动验证和处理。
+                                            </p>
+                                        </div>
+                                        <div className="text-center">
+                                            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all cursor-not-allowed opacity-60">
+                                                <span className="mr-2">📤</span>
+                                                <span>敬请期待</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* 测评榜单 */}
+                                    <div className="group relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                        <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                                            <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="mb-6">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-purple-800 mb-3">测评榜单</h3>
+                                            <p className="text-gray-600 leading-relaxed mb-6">
+                                                查看各模型在不同维度的测评排名，实时更新的性能对比和分析报告。
+                                            </p>
+                                        </div>
+                                        <div className="text-center">
+                                            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all cursor-not-allowed opacity-60">
+                                                <span className="mr-2">🏆</span>
+                                                <span>敬请期待</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+
 
             <Footer></Footer>
         </>

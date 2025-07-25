@@ -1,5 +1,6 @@
 "use client";
-import {Nav, Footer} from "@/app/common";
+import { Footer, Nav } from "@/app/common";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -62,7 +63,7 @@ export default function Home() {
                                         范式跃迁·驱动研究效率与深度革命
                                     </h3>
                                     <p className="text-gray-700 leading-relaxed mb-4">
-                                        多模态大模型具备极速检索、智能识读、多语言精准翻译等功能，可显著提升研究效率。其跨模态关联分析能力更有助于强化研究深度；驱动传统"二重证据法"向文本、图像、音频、视频、时空数据五模态互证体系的革命性升级，构建跨模态协同验证框架，显著拓展研究维度与洞察力，实现研究深度的革命性提升。
+                                        {`多模态大模型具备极速检索、智能识读、多语言精准翻译等功能，可显著提升研究效率。其跨模态关联分析能力更有助于强化研究深度；驱动传统\"二重证据法\"向文本、图像、音频、视频、时空数据五模态互证体系的革命性升级，构建跨模态协同验证框架，显著拓展研究维度与洞察力，实现研究深度的革命性提升。`}
                                     </p>
                                 </div>
                             </div>
@@ -85,7 +86,7 @@ export default function Home() {
                             
                             {/* 架构图 */}
                             <div className="bg-white rounded-xl p-6 border border-purple-200 shadow-lg">
-                                <img src="/fusion.png" alt="ECC模型架构图" className="w-full h-auto mx-auto"/>
+                                <Image src="/fusion.png" alt="ECC模型架构图" className="w-full h-auto mx-auto" width={800} height={600} />
                             </div>
                             
                         </div>
