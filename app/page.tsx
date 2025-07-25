@@ -100,7 +100,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">专家团队</h3>
                     <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/team">→</Link></span>
+                      <Link href="/team"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
                     </div>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       本项目由专家指导委员会领衔
@@ -116,7 +116,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">贡献者名单</h3>
                     <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/team#contributors">→</Link></span>
+                      <Link href="/team#contributors"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
                     </div>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       阅读我们基于本项目撰写的
@@ -132,7 +132,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">阅读文章</h3>
                     <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/">→</Link></span>
+                      <Link href="/"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
                     </div>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       阅读我们基于本项目撰写的

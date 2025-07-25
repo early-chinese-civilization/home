@@ -1,5 +1,6 @@
 "use client";
 import { Footer, Nav } from "@/app/common";
+import Image from "next/image";
 
 export default function Home() {
     // 所有专家数据
@@ -97,9 +98,11 @@ export default function Home() {
                                     <div className="relative mb-4">
                                         <div className="w-20 h-20 bg-gradient-to-br from-white to-gray-100 rounded-full mx-auto shadow-lg border-4 border-white group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 overflow-hidden">
                                             {expert.avatar ? (
-                                                <img 
-                                                    src={expert.avatar} 
+                                                <Image 
+                                                    src={process.env.NEXT_PUBLIC_BASE_PATH + expert.avatar} 
                                                     alt={expert.name}
+                                                    width={80}
+                                                    height={80}
                                                     className="w-full h-full object-cover rounded-full"
                                                 />
                                             ) : (

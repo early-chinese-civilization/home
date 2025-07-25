@@ -107,7 +107,7 @@ export function PicCard({ index, onMoreCooperationClick }: { index: number, onMo
             <div className={isMoreCooperation ? "cursor-pointer" : ""}>
                 <div
                     className="bg-cover bg-center h-48 rounded-lg overflow-hidden mb-4"
-                    style={{ backgroundImage: `url(/agent_pics/${index}.jpg)` }}
+                    style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH}/agent_pics/${index}.jpg)` }}
                     onClick={isMoreCooperation ? onMoreCooperationClick : undefined}
                 ></div>
                 <div className="text-gray-800">
