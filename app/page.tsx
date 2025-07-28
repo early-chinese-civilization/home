@@ -99,9 +99,11 @@ export default function Home() {
                 <div className="flex items-start mb-6">
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">专家团队</h3>
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <Link href="/team"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
-                    </div>
+                    <Link href="/team">  
+                      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                      </div>
+                    </Link>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       本项目由专家指导委员会领衔
                     </p>
@@ -115,10 +117,11 @@ export default function Home() {
                 <div className="flex items-start mb-6">
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">贡献者名单</h3>
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <Link href="/team#contributors"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
-                    
-                    </div>
+                    <Link href="/team#contributors">
+                      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                      </div>
+                    </Link>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       阅读我们基于本项目撰写的
                     </p>
@@ -132,9 +135,13 @@ export default function Home() {
                 <div className="flex items-start mb-6">
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">阅读文章</h3>
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <Link href="/"><span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span></Link>
-                    </div>
+                    <Link href="/" className="cursor-not-allowed">
+
+                      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        
+                      </div>
+                    </Link>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       阅读我们基于本项目撰写的
                     </p>
@@ -148,9 +155,12 @@ export default function Home() {
                 <div className="flex items-start mb-6">
                   <div>
                     <h3 className="font-bold text-2xl mb-8 text-gray-800 group-hover:text-gray-900 transition-colors">加入我们，推动知识与技术的共生演进</h3>
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300"><Link href="/team">→</Link></span>
-                    </div>
+                    <Link href="https://www.sais.com.cn/recruitList">
+                      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">
+                          →</span>
+                      </div>
+                    </Link>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       成为我们的领域专家
                     </p>

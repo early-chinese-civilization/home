@@ -368,7 +368,7 @@ export default function Home() {
                             </div>
                             <div className="p-8">
                                 {/* Question Navigation */}
-                                <div className="flex justify-between items-center mb-6">
+                                {/* <div className="flex justify-between items-center mb-6">
                                     <button className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg text-gray-700 font-medium transition-colors">
                                         ← 上一题
                                     </button>
@@ -378,7 +378,7 @@ export default function Home() {
                                     <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-white font-medium transition-colors">
                                         下一题 →
                                     </button>
-                                </div>
+                                </div> */}
                                 
                                 {/* Question and Image Section */}
                                 <div className="grid lg:grid-cols-2 gap-8 mb-8">

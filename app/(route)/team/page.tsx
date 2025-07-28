@@ -1,8 +1,11 @@
 "use client";
 import { Footer, Nav } from "@/app/common";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+    const [isScrollHighlighted, setIsScrollHighlighted] = useState(false);
     // 所有专家数据
     const allExperts = [
         {
@@ -134,14 +137,12 @@ export default function Home() {
                                 <div className="flex"><span className="w-20 inline-block">潘悟云</span><span>复旦大学中文系教授、博导，现代人类学研究中心语言学顾问</span></div>
                                 <div className="flex"><span className="w-20 inline-block">张计龙</span><span>复旦大学图书馆副馆长、研究馆员，社会科学数据研究中心副主任</span></div>
                             </div>
-                        </div>
                     </div>
                 </div>
                 
                 {/* 团队分类卡片 */}
-                <div className="mb-20">
-                    <div className="pl-6">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="mb-20 pt-20">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* AI科学家卡片 */}
                             <div className="group bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
                                 <div className="space-y-4">
@@ -203,18 +204,31 @@ export default function Home() {
                         <p className="text-xl text-gray-600 mb-12 leading-relaxed">致敬携手共进的协作伙伴</p>
                         
                         <div className="flex justify-center gap-6 mb-8">
-                            <button className="px-8 py-3 bg-white/80 backdrop-blur-sm border-2 border-purple-200 rounded-xl text-purple-700 hover:bg-purple-50 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+                            <button 
+                                onClick={() => setIsScrollHighlighted(!isScrollHighlighted)}
+                                className={`px-8 py-3 backdrop-blur-sm border-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium ${
+                                    isScrollHighlighted 
+                                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400 shadow-purple-200' 
+                                        : 'bg-white/80 border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300'
+                                }`}
+                            >
                                 标注人员
                             </button>
-                            <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
-                                成为一分子
-                            </button>
+                            <Link href="https://www.sais.com.cn/recruitList" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+                                成为一份子
+                            </Link>
                         </div>
                         
                         {/* 标注人员滚动卡片 */}
-                        <div className="relative overflow-hidden bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50 rounded-2xl p-6 shadow-inner border border-purple-100/50">
+                        <div className={`relative overflow-hidden rounded-2xl p-6 shadow-inner transition-all duration-500 ${
+                            isScrollHighlighted 
+                                ? 'bg-gradient-to-r from-purple-100 via-pink-100 to-indigo-100 border-2 border-purple-300 shadow-lg shadow-purple-200/50 ring-4 ring-purple-200/30' 
+                                : 'bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50 border border-purple-100/50'
+                        }`}>
                             <div className="flex animate-scroll whitespace-nowrap">
-                                <div className="flex space-x-8 text-gray-700 font-medium">
+                                <div className={`flex space-x-8 font-medium transition-all duration-500 ${
+                                    isScrollHighlighted ? 'text-purple-800 font-semibold' : 'text-gray-700'
+                                }`}>
                                     <span>徐艺洺</span>
                                     <span>潘馨怡</span>
                                     <span>周俊然</span>
@@ -262,7 +276,9 @@ export default function Home() {
                                     <span>崔越</span>
                                 </div>
                                 {/* 重复一遍实现无缝滚动 */}
-                                <div className="flex space-x-8 text-gray-700 font-medium ml-8">
+                                <div className={`flex space-x-8 font-medium ml-8 transition-all duration-500 ${
+                                    isScrollHighlighted ? 'text-purple-800 font-semibold' : 'text-gray-700'
+                                }`}>
                                     <span>徐艺洺</span>
                                     <span>潘馨怡</span>
                                     <span>周俊然</span>

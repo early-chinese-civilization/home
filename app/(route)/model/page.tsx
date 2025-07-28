@@ -12,7 +12,7 @@ export default function Home() {
                     {/* 页面标题 */}
                     <div className="text-center mb-16">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-                            ECC Model 解码中华早期文明的智慧中枢
+                            早期中华文明理解生成大模型
                         </h1>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
                     </div>
@@ -21,7 +21,7 @@ export default function Home() {
                     <div className="bg-white rounded-2xl shadow-xl border border-gray-200 mb-12 overflow-hidden">
                         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6">
                             <h2 className="text-2xl font-bold text-white flex items-center">
-                                早期中华文明多模态理解生成大模型
+                                模型简介
                             </h2>
                         </div>
                         <div className="p-8">
@@ -74,7 +74,7 @@ export default function Home() {
                     <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
                         <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6">
                             <h2 className="text-2xl font-bold text-white flex items-center">
-                                早期中华文明多模态理解生成大模型运行机制示意图
+                                模型运行机制示意图
                             </h2>
                         </div>
                         <div className="p-8">

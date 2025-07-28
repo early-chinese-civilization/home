@@ -53,11 +53,11 @@ export function Footer() {
                 <div className="flex flex-col items-center text-center space-y-2">
                     <p>© 2025 早期中华文明多模态大模型团队. 版权所有</p>
                     <div className="flex space-x-4">
-                        <a href="#" className="text-blue-500 hover:text-blue-700">隐私政策</a>
+                        <Link href="/privacy" className="text-blue-500 hover:text-blue-700">隐私政策</Link>
                         <span className="text-gray-400">|</span>
-                        <a href="#" className="text-blue-500 hover:text-blue-700">了解团队</a>
+                        <Link href="/team" className="text-blue-500 hover:text-blue-700">了解团队</Link>
                         <span className="text-gray-400">|</span>
-                        <a href="#" className="text-blue-500 hover:text-blue-700">加入我们</a>
+                        <Link href="https://www.sais.com.cn/recruitList" className="text-blue-500 hover:text-blue-700">加入我们</Link>
                     </div>
                 </div>
             </footer>
@@ -134,7 +134,7 @@ export const TextCardDataList = [
             "作为专门为早期中华文明研究打造的测评集，ECC Bench首创\"学科领域×问题难度×研究场景\"三维度分层设计体系，联合领域专家开展数据筛选与标注，以严谨的学术标准确保数据权威性与应用价值。",
             "ECC Bench 为可为AI for Humanities的多模态模型测评、智能体训练与知识生成提供坚实支撑，重塑人文社科智能研究的评估标准。"
         ],
-        "url": "",
+        "url": "/benchmark",
         "button_text": "了解更多"
     },
     {
@@ -144,7 +144,7 @@ export const TextCardDataList = [
             "ECC Model 是首个专为早期中华文明研究打造的多模态基础大模型，基于统一的Diffusion Transformer架构推出 8B 与 72B 两种参数规模，全面支持文本、图像、音频、视频、空间地理信息等五大模态的统一理解与生成。",
             "模型创新性提出MCTS-GRPO 多模态强化训练框架，首次将人文学科研究范式深度融入大模型训练，使模型具备文献检索、史料识读、事实呈现、特征描述、信度考据与分析推理等多项核心科研能力，满足大多数科研需求。"
         ],
-        "url": "",
+        "url": "/model",
         "button_text": "了解更多"
     },
     {
@@ -153,7 +153,7 @@ export const TextCardDataList = [
         "description": [
             "ECC Agent 是专为早期中华文明研究打造的多学科、多场景人工智能代理体系，集成持续对话、任务拆解、多轮推理与自主规划等关键能力，能够实现精准理解与智能响应。通过构建可追溯、可验证的知识生成机制，确保模型输出依托可靠来源与完整证据链，切实满足考古、历史、古文字等领域的科研要求。"
         ],
-        "url": "",
+        "url": "/agent",
         "button_text": "了解更多"
     }
 ]
@@ -191,9 +191,9 @@ export function TextCard({ index }: { index: number }) {
 
                 {/* 下方按钮区域 - 固定在底部居中 */}
                 <div className="flex justify-center mt-6">
-                    <a href="#" className="bg-gradient-to-r from-gray-800 to-gray-900 text-white px-6 py-3 rounded-xl text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <Link href={data.url} className="bg-gradient-to-r from-gray-800 to-gray-900 text-white px-6 py-3 rounded-xl text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         {data.button_text}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>
@@ -216,11 +216,14 @@ export function SidebarCard({ index, spanNumber }: { index: number, spanNumber: 
         } else if (index === 1) {
             // 贡献者名单 - 跳转到team页面的其他贡献者部分
             return () => window.location.href = '/team#contributors'
+        } else if (index === 3) {
+            // 加入我们 - 跳转到SAIS招聘页面
+            return () => window.location.href = 'https://www.sais.com.cn/recruitList'
         }
         return undefined
     }
 
-    const isClickable = index === 0 || index === 1
+    const isClickable = index === 0 || index === 1 || index === 3
 
     return (
         <>

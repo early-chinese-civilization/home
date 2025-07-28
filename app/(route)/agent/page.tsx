@@ -17,48 +17,9 @@ export default function Home() {
     return (
         <>
             <Nav></Nav>
-            {/* Hero Section */}
-            <div className="relative h-screen flex items-center justify-center overflow-hidden">
-                
-                {/* Content */}
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                    
-                    {/* Main title with animation */}
-                    <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
-                        ECC Agent
-                    </h1>
-                    
-                    {/* Subtitle with typewriter effect */}
-                    <p className="text-2xl md:text-3xl mb-4 text-blue-700 font-light">
-                        早期中华文明
-                    </p>
-                    <p className="text-xl md:text-2xl mb-12 text-purple-700 font-light">
-                        智能体平台
-                    </p>
-                    
-                </div>
-                
-                {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-                    <div className="flex flex-col items-center">
-                        <span className="text-sm mb-2">向下滚动</span>
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            {/* Add custom CSS for grid animation */}
-            <style jsx>{`
-                @keyframes grid-move {
-                    0% { transform: translate(0, 0); }
-                    100% { transform: translate(50px, 50px); }
-                }
-            `}</style>
-            
+
             {/* Content Section */}
-            <div className="max-w-5xl mx-auto px-4 py-16">
+            <div className="max-w-5xl pt-40 mx-auto px-4 py-16">
                 <div className="grid grid-cols-2 gap-12 items-stretch">
                     {/* Left side - 3D Architecture */}
                     <div className="flex justify-center">
@@ -90,7 +51,7 @@ export default function Home() {
                                                 <span className="absolute inset-0 text-sm text-blue-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">古籍版本比对与校勘 Agent</span>
                                                 <span className="relative text-sm text-blue-200 font-bold drop-shadow-lg" style={{
                                                     textShadow: '0 0 10px rgba(59, 130, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
-                                                }}>古籍版本比对与校勘 Agent</span>
+                                                }}>考古报告生成</span>
                                             </div>
                                         </div>
                                         
@@ -99,7 +60,7 @@ export default function Home() {
                                                 <span className="absolute inset-0 text-sm text-blue-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">OCR优化与古文字识别 Agent</span>
                                                 <span className="relative text-sm text-blue-200 font-bold drop-shadow-lg" style={{
                                                     textShadow: '0 0 10px rgba(59, 130, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
-                                                }}>OCR优化与古文字识别 Agent</span>
+                                                }}>考古类型学分析</span>
                                             </div>
                                         </div>
                                         
@@ -108,7 +69,7 @@ export default function Home() {
                                                 <span className="absolute inset-0 text-sm text-blue-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">历史地图标注与可视化 Agent</span>
                                                 <span className="relative text-sm text-blue-200 font-bold drop-shadow-lg" style={{
                                                     textShadow: '0 0 10px rgba(59, 130, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
-                                                }}>历史地图标注与可视化 Agent</span>
+                                                }}>古籍校勘</span>
                                             </div>
                                         </div>
                                     </div>
@@ -126,7 +87,7 @@ export default function Home() {
                                                 <span className="absolute inset-0 text-sm text-purple-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">考古类型学分析Agent</span>
                                                 <span className="relative text-sm text-purple-200 font-bold drop-shadow-lg" style={{
                                                     textShadow: '0 0 10px rgba(147, 51, 234, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
-                                                }}>考古类型学分析Agent</span>
+                                                }}>古籍版本比对</span>
                                             </div>
                                         </div>
                                         
@@ -135,7 +96,7 @@ export default function Home() {
                                                 <span className="absolute inset-0 text-sm text-purple-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">考古简报/报告撰写Agent</span>
                                                 <span className="relative text-sm text-purple-200 font-bold drop-shadow-lg" style={{
                                                     textShadow: '0 0 10px rgba(147, 51, 234, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
-                                                }}>考古简报/报告撰写Agent</span>
+                                                }}>古文字识别</span>
                                             </div>
                                         </div>
                                         
@@ -144,7 +105,16 @@ export default function Home() {
                                                 <span className="absolute inset-0 text-sm text-purple-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">古音拟构与韵律分析 Agent</span>
                                                 <span className="relative text-sm text-purple-200 font-bold drop-shadow-lg" style={{
                                                     textShadow: '0 0 10px rgba(147, 51, 234, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
-                                                }}>古音拟构与韵律分析 Agent</span>
+                                                }}>历史地理标注与可视化</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="absolute -bottom-6 -right-16">
+                                            <div className="relative">
+                                                <span className="absolute inset-0 text-sm text-purple-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">古音拟构与韵律分析 Agent</span>
+                                                <span className="relative text-sm text-purple-200 font-bold drop-shadow-lg" style={{
+                                                    textShadow: '0 0 10px rgba(147, 51, 234, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
+                                                }}>古音拟构与韵律分析</span>
                                             </div>
                                         </div>
                                     </div>
@@ -250,7 +220,7 @@ export default function Home() {
                     {/* Right side - Content */}
                     <div className="h-full flex flex-col justify-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
                         {/* Header section */}
-                        <div className="mb-8">
+                        <div className="mb-8 -mt-26">
                             <div className="inline-block mb-4">
                                 <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-semibold shadow-lg">🤖 AI Platform</span>
                             </div>
@@ -292,7 +262,7 @@ export default function Home() {
                         </div>
                         
                         {/* CTA Button */}
-                        <div className="mt-10">
+                        {/* <div className="mt-10">
                             <button className="group relative w-full bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-purple-700 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <div className="relative flex items-center justify-center space-x-2">
@@ -303,7 +273,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
