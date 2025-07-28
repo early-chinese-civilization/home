@@ -34,7 +34,7 @@ export default function Privacy() {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">引言</h2>
                             <p className="mb-4">
-                                早期中华文明多模态大模型团队（以下简称"我们"）深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则，保护您的个人信息：
+                                早期中华文明多模态大模型团队（以下简称&quot;我们&quot;）深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则，保护您的个人信息：
                             </p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
                                 <li>权责一致原则：明确个人信息处理目的、方式和范围，确保处理活动与处理目的直接相关</li>
