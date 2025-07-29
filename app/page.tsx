@@ -10,7 +10,7 @@ export default function Home() {
     
     {/* Hero Background */}
     <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen">
-      <main className="max-w-5xl mx-auto px-6 py-12 pt-24">
+      <main className="max-w-5xl mx-auto px-4 py-12 pt-24">
         {/* Hero Section */}
         <section className="mb-20 pt-12">
           <div className="grid grid-cols-4 gap-8 items-center">
@@ -38,8 +38,8 @@ export default function Home() {
         {/* Content Section */}
         <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/50 mb-16">
           <div className="max-w-4xl">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8 leading-relaxed text-justify">
-                早期中华文明多模态大模型（Early Chinese Civilization Multimodal Model）是全球首个聚焦早期中华文明的多模态大模型，旨在贯彻习近平总书记关于&quot;在创造性转化和创新性发展中赓续中华文脉&quot;的重要指示、围绕&quot;中华文明起源、形成与早期发展&quot;这一重大课题，以多学科、多角度、多层次、全方位的方式，为早期中华文明研究开辟智能化新路径、构筑文明传承与创新发展的数字基座。
+            <h2 className="text-xl font-bold text-gray-800 mb-8 leading-relaxed text-justify">
+                早期中华文明多模态大模型（Early Chinese Civilization Multimodal Model）是全球首个聚焦早期中华文明的多模态大模型。 该模型积极响应习总书记关于&quot;加快建设文化强国&quot;、&quot;推动中华优秀传统文化创造性转化、创新性发展&quot;的重要指示，围绕&quot;中华文明起源、形成与早期发展&quot;这一重大课题，致力于通过多学科、多角度、多层次、全方位的探索，为早期中华文明研究开辟智能化新路径，为建设中华民族现代文明构筑坚实的数字基座
               </h2>
 
             <div className="mt-10 space-y-8">
@@ -53,19 +53,18 @@ export default function Home() {
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                     <p className="text-gray-700 leading-relaxed text-lg">
-                      系统覆盖考古、文物、中国古代史、历史地理学、文献学、汉语言文字学、中国古代文学、中国少数民族语言文学等学科领域，整合甲骨金文、方志舆图等珍稀史料，实现多元史料交叉验证与综合阐释；
-                    </p>
+                      系统覆盖考古、文物、中国古代史、历史地理学、文献学、汉语言文字学、中国古代文学、中国少数民族语言文学等学科领域，整合甲骨金文、方志舆图等珍稀史料，实现多元史料交叉验证与综合阐释；                    </p>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                     <p className="text-gray-700 leading-relaxed text-lg">
-                      全面融合文本、图像、音频、视频、空间地理信息等多维数据，打通异构信息的关联链路，推动多模态信息的深度交互与协同呈现；
+                        全面融合文本、图像、音频、视频、空间地理信息等多维数据，打通异构信息的关联链路，推动多模态信息的深度交互与协同呈现；
                     </p>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                     <p className="text-gray-700 leading-relaxed text-lg">
-                      深度嵌入人文社科研究范式，充分体现以语境还原为前提、以证据互证为路径、以多元诠释为目标的知识生产逻辑，注重多元视角的开放性解释与批判性反思的学术传统，开创智能化研究新模式。
+                        深度嵌入人文社科研究范式，充分体现以语境还原为前提、以证据互证为路径、以多元诠释为目标的知识生产逻辑，注重多元视角的开放性解释与批判性反思的学术传统，开创智能化研究新模式。
                     </p>
                   </div>
                 </div>
@@ -108,7 +107,7 @@ export default function Home() {
                       本项目由专家指导委员会领衔
                     </p>
                     <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
-                      AI科学家、专业领域学者、工程技术人员联合开发
+                      由AI科学家、专业领域学者、工程技术人员联合开发
                     </p>
                   </div>
                 </div>
@@ -123,7 +122,7 @@ export default function Home() {
                       </div>
                     </Link>
                     <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
-                      阅读我们基于本项目撰写的
+                      本项目是集体努力的成果
                     </p>
                     <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
                       向所有参与人员致谢
@@ -146,7 +145,7 @@ export default function Home() {
                       阅读我们基于本项目撰写的
                     </p>
                     <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
-                      AI for Humanity 主题文章
+                      专题研究
                     </p>
                   </div>
                 </div>

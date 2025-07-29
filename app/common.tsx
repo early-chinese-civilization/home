@@ -49,7 +49,7 @@ export function Nav() {
 export function Footer() {
     return (
         <>
-            <footer className="mt-2 bg-white border-t text-sm text-gray-500 py-12 pt-10">
+            <footer className="mt-2 bg-white text-sm text-gray-500 py-12 pt-10">
                 <div className="flex flex-col items-center text-center space-y-2">
                     <p>© 2025 早期中华文明多模态大模型团队. 版权所有</p>
                     <div className="flex space-x-4">
@@ -142,7 +142,7 @@ export const TextCardDataList = [
         "title2": "解码中华早期文明的智慧中枢",
         "description": [
             "ECC Model 是首个专为早期中华文明研究打造的多模态基础大模型，基于统一的Diffusion Transformer架构推出 8B 与 72B 两种参数规模，全面支持文本、图像、音频、视频、空间地理信息等五大模态的统一理解与生成。",
-            "模型创新性提出MCTS-GRPO 多模态强化训练框架，首次将人文学科研究范式深度融入大模型训练，使模型具备文献检索、史料识读、事实呈现、特征描述、信度考据与分析推理等多项核心科研能力，满足大多数科研需求。"
+            "模型创新性提出MCTS-GRPO 多模态强化训练框架，首次将人文学科研究范式深度融入大模型训练，使模型具备文献检索、史料识读、资料翻译、事实呈现、特征描述、信度考据与分析推理等多项核心能力，满足多种科研需求。"
         ],
         "url": "/model",
         "button_text": "了解更多"
@@ -151,7 +151,9 @@ export const TextCardDataList = [
         "title1": "ECC Agent",
         "title2": "赋能教育、科研、大文化的智能体",
         "description": [
-            "ECC Agent 是专为早期中华文明研究打造的多学科、多场景人工智能代理体系，集成持续对话、任务拆解、多轮推理与自主规划等关键能力，能够实现精准理解与智能响应。通过构建可追溯、可验证的知识生成机制，确保模型输出依托可靠来源与完整证据链，切实满足考古、历史、古文字等领域的科研要求。"
+            "ECC Agent 是专为早期中华文明研究打造的多学科、多场景人工智能代理体系，集成持续对话、任务拆解、多轮推理与自主规划等关键能力，能够实现精准理解与智能响应。通过构建可追溯、可验证的知识生成机制，确保模型输出依托可靠来源与完整证据链，切实满足考古、历史、古文字等领域的科研要求。",
+            "作为一个开放型智能体，ECC Agent 不仅可服务于专业研究，亦可广泛赋能教育培训、科研创新与大文化产业，为中华文明的创造性转化与创新性发展注入智能动能。"
+
         ],
         "url": "/agent",
         "button_text": "了解更多"
@@ -159,9 +161,9 @@ export const TextCardDataList = [
 ]
 
 export const SidebarCardList = [
-    ["专家团队", "本项目由专家指导委员会领衔", "AI科学家、专业领域学者、工程技术人员联合开发"],
+    ["专家团队", "本项目由专家指导委员会领衔", "由AI科学家、专业领域学者、工程技术人员联合开发"],
     ["贡献者名单", "本项目是集体努力的成果", "向所有参与人员致谢"],
-    ["阅读文章", "阅读我们基于本项目撰写的", "“AI for Humanity” 主题文章"],
+    ["阅读文章", "阅读我们基于本项目撰写的", "专题研究"],
     ["加入我们，推动知识与技术的共生演进", "成为我们的领域专家", "共同引领人工智能在文明研究中的深度突破"]
 ]
 
@@ -175,12 +177,12 @@ export function TextCard({ index }: { index: number }) {
 
     return (
         <>
-            <div className={`bg-gradient-to-br ${gradients[index]} border border-gray-200/50 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-120 flex flex-col rounded-2xl backdrop-blur-sm`}>
+            <div className={`bg-gradient-to-br ${gradients[index]} border border-gray-200/50 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-150 flex flex-col rounded-2xl backdrop-blur-sm`}>
                 <div className="flex items-center mb-4">
                     <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></div>
                     <h3 className="text-xl font-bold text-gray-800">{data.title1}</h3>
                 </div>
-                <p className="text-lg font-semibold mb-6 text-gray-700 leading-relaxed">{data.title2}</p>
+                <p className="text-base font-semibold mb-6 text-gray-700 leading-relaxed whitespace-nowrap">{data.title2}</p>
 
                 {/* 上方文字区域 - 固定高度，超出显示省略号 */}
                 <div className="flex-1 overflow-hidden">
