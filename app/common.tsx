@@ -4,7 +4,7 @@ import Link from "next/link";
 export function SidebarButton({ text, url }: { text: string, url: string }) {
     return (
         <Link className='
-      text-gray-700 hover:text-gray-900 text-sm font-medium 
+      text-gray-700 hover:text-gray-900 text-lg font-medium 
       hover:bg-white hover:text-black'
             href={`${url}`}>
             {text}
@@ -21,8 +21,8 @@ export function Nav() {
                     {/* Logo and Site Name */}
                     <div className="flex items-center space-x-4">
                         <Link href="/" className="text-gray-900 font-medium leading-tight">
-                            <div className="text-sm font-bold">早期中华文明多模态大模型</div>
-                            <div className="text-xs text-gray-600">Early Chinese Civilization Multimodal Model</div>
+                            <div className="text-lg font-bold">早期中华文明多模态大模型</div>
+                            <div className="text-lg text-gray-600">Early Chinese Civilization Multimodal Model</div>
                         </Link>
                     </div>
 
@@ -117,8 +117,8 @@ export function PicCard({ index, onMoreCooperationClick }: { index: number, onMo
                     >
                         {picText.p1}
                     </h3>
-                    <p className="text-sm mb-1">{picText.p2}</p>
-                    <p className="text-sm">{picText.p3}</p>
+                    <p className="text-base mb-1">{picText.p2}</p>
+                    <p className="text-base">{picText.p3}</p>
                 </div>
             </div>
         </>
@@ -177,7 +177,7 @@ export function TextCard({ index }: { index: number }) {
 
     return (
         <>
-            <div className={`bg-gradient-to-br ${gradients[index]} border border-gray-200/50 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-150 flex flex-col rounded-2xl backdrop-blur-sm`}>
+            <div className={`bg-gradient-to-br ${gradients[index]} border border-gray-200/50 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-190 flex flex-col rounded-2xl backdrop-blur-sm`}>
                 <div className="flex items-center mb-4">
                     <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></div>
                     <h3 className="text-xl font-bold text-gray-800">{data.title1}</h3>
@@ -186,7 +186,7 @@ export function TextCard({ index }: { index: number }) {
 
                 {/* 上方文字区域 - 固定高度，超出显示省略号 */}
                 <div className="flex-1 overflow-hidden">
-                    <div className="text-sm text-gray-600 h-70 leading-relaxed">
+                    <div className="text-lg text-gray-600 h-100 leading-relaxed">
                         <p className="mb-2 whitespace-pre-line">{data.description.join('\n')}</p>
                     </div>
                 </div>
@@ -240,10 +240,10 @@ export function SidebarCard({ index, spanNumber }: { index: number, spanNumber: 
                         <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </div>
-                        <p className="text-gray-700 text-base leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                        <p className="text-gray-700 text-lg leading-relaxed group-hover:text-gray-800 transition-colors">
                             {card[1]}
                         </p>
-                        <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-700 transition-colors">
+                        <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
                             {card[2]}
                         </p>
                     </div>

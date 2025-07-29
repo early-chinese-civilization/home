@@ -73,9 +73,6 @@ export default function Home() {
             <div className="max-w-5xl mx-auto px-4 py-16 relative z-10">
                 {/* Hero Section */}
                 <div className="text-center mb-20 pt-20">
-                    <div className="inline-block mb-6">
-                        <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-semibold">👥 Expert Advisory Committee</span>
-                    </div>
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent mb-6">专家指导委员会</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         汇聚顶尖学者与专家，共同推进早期中华文明研究的数字化创新
@@ -88,43 +85,83 @@ export default function Home() {
                     {/* 专家展示容器 */}
                     <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
                         {/* 专家网格 - 显示所有专家 */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                            {allExperts.map((expert, index) => (
-                                <div key={index} className="text-center group">
-                                    <div className="mb-4">
-                                        <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${getRoleColor(expert.role)} text-white rounded-full text-xs font-semibold shadow-lg`}>
-                                            <span className="mr-1">✨</span>
-                                            {expert.role}
+                        <div className="space-y-8">
+                            {/* 第一行 - 2位专家 */}
+                            <div className="flex justify-evenly">
+                                {allExperts.slice(0, 2).map((expert, index) => (
+                                    <div key={index} className="text-center group flex-1 max-w-xs">
+                                        <div className="mb-4">
+                                            <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${getRoleColor(expert.role)} text-white rounded-full text-xs font-semibold shadow-lg`}>
+                                                {expert.role}
+                                            </div>
+                                        </div>
+                                        {/* 头像容器 */}
+                                        <div className="relative mb-4">
+                                            <div className="w-20 h-20 bg-gradient-to-br from-white to-gray-100 rounded-full mx-auto shadow-lg border-4 border-white group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 overflow-hidden">
+                                                {expert.avatar ? (
+                                                    <Image 
+                                                        src={process.env.NEXT_PUBLIC_BASE_PATH + expert.avatar}
+                                                        alt={expert.name}
+                                                        width={80}
+                                                        height={80}
+                                                        className="w-full h-full object-cover rounded-full"
+                                                    />
+                                                ) : (
+                                                    <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                                                        <span className="text-2xl font-bold text-gray-600">{expert.name.charAt(0)}</span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <h3 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">{expert.name}</h3>
+                                        <div className="h-16 flex flex-col justify-start">
+                                            <p className="text-lg text-gray-600 mb-1 leading-tight break-words">{expert.title1}</p>
+                                            {expert.title2 && <p className="text-lg text-gray-500 leading-tight break-words">{expert.title2}</p>}
                                         </div>
                                     </div>
-                                    {/* 头像容器 */}
-                                    <div className="relative mb-4">
-                                        <div className="w-20 h-20 bg-gradient-to-br from-white to-gray-100 rounded-full mx-auto shadow-lg border-4 border-white group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 overflow-hidden">
-                                            {expert.avatar ? (
-                                                <Image 
-                                                    src={process.env.NEXT_PUBLIC_BASE_PATH + expert.avatar}
-                                                    alt={expert.name}
-                                                    width={80}
-                                                    height={80}
-                                                    className="w-full h-full object-cover rounded-full"
-                                                />
-                                            ) : (
-                                                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                                                    <span className="text-2xl font-bold text-gray-600">{expert.name.charAt(0)}</span>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <h3 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">{expert.name}</h3>
-                                    <p className="text-xs text-gray-600 mb-1 leading-tight break-words">{expert.title1}</p>
-                                    {expert.title2 && <p className="text-xs text-gray-500 leading-tight break-words">{expert.title2}</p>}
-                                </div>
-                            ))}
-                        </div>
+                                ))}
+                            </div>
+                            
+                            {/* 第二行 - 3位专家 */}
+                             <div className="flex justify-evenly">
+                                 {allExperts.slice(2, 5).map((expert, index) => (
+                                     <div key={index + 2} className="text-center group flex-1 max-w-xs">
+                                         <div className="mb-4">
+                                             <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${getRoleColor(expert.role)} text-white rounded-full text-xs font-semibold shadow-lg`}>
+                                                 {expert.role}
+                                             </div>
+                                         </div>
+                                         {/* 头像容器 */}
+                                         <div className="relative mb-4">
+                                             <div className="w-20 h-20 bg-gradient-to-br from-white to-gray-100 rounded-full mx-auto shadow-lg border-4 border-white group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 overflow-hidden">
+                                                 {expert.avatar ? (
+                                                     <Image 
+                                                         src={process.env.NEXT_PUBLIC_BASE_PATH + expert.avatar}
+                                                         alt={expert.name}
+                                                         width={80}
+                                                         height={80}
+                                                         className="w-full h-full object-cover rounded-full"
+                                                     />
+                                                 ) : (
+                                                     <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                                                         <span className="text-2xl font-bold text-gray-600">{expert.name.charAt(0)}</span>
+                                                     </div>
+                                                 )}
+                                             </div>
+                                         </div>
+                                         <h3 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">{expert.name}</h3>
+                                         <div className="h-16 flex flex-col justify-start">
+                                             <p className="text-lg text-gray-600 mb-1 leading-tight break-words">{expert.title1}</p>
+                                             {expert.title2 && <p className="text-lg text-gray-500 leading-tight break-words">{expert.title2}</p>}
+                                         </div>
+                                     </div>
+                                 ))}
+                             </div>
+                         </div>
                         
                         {/* 新增专家名单 */}
                         <div className="mt-12 pt-8 pl-6 border-t border-gray-200/50">
-                            <div className="text-left space-y-2 text-sm text-gray-700">
+                            <div className="text-left space-y-2 text-lg text-gray-700">
                                 <div className="flex"><span className="w-20 inline-block">金   力</span><span>复旦大学校长，中国科学院院士</span></div>
                                 <div className="flex"><span className="w-20 inline-block">陆建松</span><span>复旦大学文物与博物馆学系教授、博导，国家文物局专家库专家</span></div>
                                 <div className="flex"><span className="w-20 inline-block">袁   靖</span><span>复旦大学特聘教授、博导</span></div>
@@ -146,7 +183,7 @@ export default function Home() {
                             {/* AI科学家卡片 */}
                             <div className="group bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
                                 <div className="space-y-4">
-                                    <div className="text-sm text-gray-700 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
+                                    <div className="text-lg text-gray-700 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
                                         <div>朱思语</div>
                                         <div>陈保友</div>
                                         <div>夏翰宸</div>
@@ -161,7 +198,7 @@ export default function Home() {
                             {/* 领域专家卡片 */}
                             <div className="group bg-gradient-to-br from-white via-green-50 to-emerald-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
                                 <div className="space-y-4">
-                                    <div className="text-sm text-gray-700 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
+                                    <div className="text-lg text-gray-700 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
                                         <div>刘　钊</div>
                                         <div>张晓虹</div>
                                         <div>高　晞</div>
@@ -178,7 +215,7 @@ export default function Home() {
                             {/* 工程团队卡片 */}
                             <div className="group bg-gradient-to-br from-white via-orange-50 to-amber-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
                                 <div className="space-y-4">
-                                    <div className="text-sm text-gray-700 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
+                                    <div className="text-lg text-gray-700 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
                                         <div>张兴盟</div>
                                         <div>张利伟</div>
                                         <div>黄宸莹</div>
@@ -197,11 +234,8 @@ export default function Home() {
                 {/* 其他贡献者部分 */}
                 <div id="contributors" className="text-center">
                     <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
-                        <div className="inline-block mb-6">
-                            <span className="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full text-sm font-semibold">🤝 Contributors</span>
-                        </div>
                         <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent mb-6">其他贡献者</h2>
-                        <p className="text-xl text-gray-600 mb-12 leading-relaxed">致敬携手共进的协作伙伴</p>
+                        <p className="text-lg text-gray-600 mb-12 leading-relaxed">致敬携手共进的协作伙伴</p>
                         
                         <div className="flex justify-center gap-6 mb-8">
                             <button 
@@ -226,7 +260,7 @@ export default function Home() {
                                 : 'bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50 border border-purple-100/50'
                         }`}>
                             <div className="flex animate-scroll whitespace-nowrap">
-                                <div className={`flex space-x-8 font-medium transition-all duration-500 ${
+                                <div className={`flex text-lg space-x-8 font-medium transition-all duration-500 ${
                                     isScrollHighlighted ? 'text-purple-800 font-semibold' : 'text-gray-700'
                                 }`}>
                                     <span>徐艺洺</span>

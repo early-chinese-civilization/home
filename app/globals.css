@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f5;
+  --foreground: #2d1810;
+  --song-gold: #d4af37;
+  --song-red: #c8102e;
+  --song-blue: #1e3a8a;
+  --song-green: #166534;
+  --song-brown: #92400e;
 }
 
 body {

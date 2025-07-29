@@ -123,7 +123,7 @@ export default function Home() {
                 "D. 律是临时性法令，令是永久性法典"
             ],
             answer: "B",
-            tags: ["（1）学科领域：中国古代史；历史文献学", "（2）历史分期：秦；西汉", "（3）核心目的：分析推论"],
+            tags: ["学科领域：中国古代史；历史文献学", "历史分期：秦；西汉", "核心目的：分析推论"],
             reference: ["孟彦弘.秦汉法典体系的演变[J].历史研究,2005,(3): 19-36+190"]
         },
         {
@@ -135,7 +135,7 @@ export default function Home() {
                 "D. 凸棱纹位于豆柄部"
             ],
             answer: "A",
-            tags: ["（1）学科领域：考古；文物", "（2）历史分期：新石器时代；商", "（3）核心目的：分析推论；特征描述"],
+            tags: ["学科领域：考古；文物", "历史分期：新石器时代；商", "核心目的：分析推论；特征描述"],
             reference: ["张立明,王玉芝,刘金亭.山东乐陵、庆云古遗址调查简报[J].华夏考古, 2000(1):1"]
         },
         {
@@ -229,7 +229,6 @@ export default function Home() {
                             早期中华文明评测集
                         </h1>
                         <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                            
                             全球首创聚焦早期中华文明的万题级研究导向评测集
                         </p>
                     </div>
@@ -238,14 +237,9 @@ export default function Home() {
                     <div className="space-y-12">
                         {/* 第一个框 */}
                         <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
-                                <h2 className="text-2xl font-bold text-white flex items-center">
-                                    核心概述
-                                </h2>
-                            </div>
                             <div className="p-8">
                                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                                    本评测集是全球规模最大（10,000 道题）、聚焦早期中华文明的高质量中文研究导向评测集，旨在填补该领域系统性、大规模能力评估的空白。其核心优势体现为首创性、系统性与权威性的有机统一。
+                                    本评测集是全球规模最大、聚焦早期中华文明的高质量研究导向型评测集，旨在填补该领域系统性、大规模能力评估的空白。
                                 </p>
                                 
                                 {/* 重新设计的三栏布局 */}
@@ -253,16 +247,16 @@ export default function Home() {
                                     {/* 首创性 */}
                                     <div className="bg-blue-50 rounded-xl p-6">
                                         <h3 className="text-xl font-bold text-blue-800 mb-4 flex items-center">
-                                            <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">1</span>
+                                            <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">1</span>
                                             首创性
                                         </h3>
                                         <p className="text-gray-700 leading-relaxed">
-                                            全球首个面向早期中华文明领域深度研究能力的万题级研究导向评测集，首创开放式问答评估体系，在规模与深度上实现双重突破。
+                                            作为全球首个聚焦早期中华文明深度研究能力的万题级研究导向评测集，首创开放式问答评估体系，在规模与深度上实现双重突破，成为该领域能力评估的创新里程碑。
                                         </p>
                                         <div className="mt-4 p-4 text-gray-700 rounded-lg">
                                             <div className="text-center">
-                                                <div className="text-3xl font-bold text-blue-600">10,000+</div>
-                                                <div className="text-sm text-gray-700">题目规模</div>
+                                                <div className="text-3xl font-bold text-blue-600">10,000</div>
+                                                <div className="text-lg text-gray-700">题目规模</div>
                                             </div>
                                         </div>
                                     </div>
@@ -270,11 +264,11 @@ export default function Home() {
                                     {/* 系统性 */}
                                     <div className="bg-green-50 rounded-xl p-6">
                                         <h3 className="text-xl font-bold text-green-800 mb-4 flex items-center">
-                                            <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">2</span>
+                                            <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">2</span>
                                             系统性
                                         </h3>
                                         <p className="text-gray-700 leading-relaxed mb-4">
-                                            系统覆盖旧石器时代至西汉各历史分期。
+                                            测评集内容系统覆盖中华文明起源、形成与发展的各个历史时期，广泛涉及该议题相关学科的一手史料与研究文献；题目设计按专业领域分类、依能力维度设题、结合研究场景布局，实现多维度系统评估。
                                         </p>
                                         <p className="text-gray-700 leading-relaxed">
                                             {`独创\"学科领域 × 问题类型 × 研究场景\"三维设计体系，实现精准、多维度能力评估。`}
@@ -290,11 +284,11 @@ export default function Home() {
                                     {/* 权威性 */}
                                     <div className="bg-purple-50 rounded-xl p-6 lg:col-span-1 md:col-span-2">
                                         <h3 className="text-xl font-bold text-purple-800 mb-4 flex items-center">
-                                            <span className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">3</span>
+                                            <span className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">3</span>
                                             权威性
                                         </h3>
                                         <p className="text-gray-700 leading-relaxed mb-4">
-                                            本测评集基于专业化多核心数据制备与严格审核体系，题目根基源于专业研究文献与权威数据库，经由领域专业人士进行多层深度标注审核，确保每道题目的专业性与可靠性达到最高标准。
+                                            依托专业的多模态数据制备与审核流程，全面采集权威数据库的学术资源 ，并经领域专家多轮标注审核，严格确保题目专业性与可靠性。
                                         </p>
                                         
             
@@ -311,7 +305,7 @@ export default function Home() {
                         <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
                             <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6">
                                 <h2 className="text-2xl font-bold text-white flex items-center">
-                                    评测集结构完善性：三维度分层设计体系
+                                    独创三维分层体系
                                 </h2>
                             </div>
                             <div className="p-8">
@@ -320,11 +314,9 @@ export default function Home() {
 
                                 {/* 一、学科领域全覆盖 */}
                                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">学科领域全覆盖：构建知识评估基座</h3>
-                                    
-                                    <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                                        系统覆盖八大核心学科，建立综合评估基础。
-                                    </p>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+                                        八大学科领域，全面覆盖研究范畴
+                                    </h3>
                                     
                                     <div className="rounded-lg p-6">
                                          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -357,39 +349,45 @@ export default function Home() {
                                 </div>
                                 {/* 一、四大题型能力分层 */}
                                 <div className="bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-xl p-8 mb-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">四大题型能力分层：精准定位模型能力域</h3>
-                                    
-                                    <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                                        多元题型精准匹配能力维度，确保测评方式与目标能力高度契合。
-                                    </p>
-                                    
+                                    <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+                                        四大题目类型，精准定位模型能力
+                                    </h3>
+                                
 
                                     <div className="rounded-lg p-6">
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                             <div className="bg-blue-50 rounded-lg p-4 text-center border border-blue-200 hover:bg-blue-100 transition-colors">
                                                 <p className="font-semibold text-blue-700 mb-4">判断题</p>
-                                                <p className="font-xl">概念理解</p>
-                                                <p className="font-xl">信息确认</p>
-                                                <p className="font-xl">抗幻觉能力</p>
+                                                <p className="font-xl">概念辨析</p>
+                                                <p className="font-xl">事实甄别</p>
+                                                <p className="font-xl">认知去偏</p>
+  
                                             </div>
                                             <div className="bg-purple-50 rounded-lg p-4 text-center border border-purple-200 hover:bg-purple-100 transition-colors">
                                                 <p className="font-semibold text-green-700 mb-4">选择题</p>
-                                                <p className="font-xl">事实辨析</p>
-                                                <p className="font-xl">分析推论</p>
-                                                <p className="font-xl">迷惑项过滤</p>
+                                                <p className="font-xl">信息锚定</p>
+                                                <p className="font-xl">关系推演</p>
+                                                <p className="font-xl">干扰排除</p>
+
                                             </div>
 
                                             <div className="bg-orange-50 rounded-lg p-4 text-center border border-orange-200 hover:bg-orange-100 transition-colors">
                                                 <p className="font-semibold text-orange-700 mb-4">简答题</p>
-                                                <p className="font-xl">因果推理显性化</p>
-                                                <p className="font-xl">要素结构化提炼</p>
-                                                <p className="font-xl">迷惑项过滤</p>
+                                                <p className="font-xl">要素提炼</p>
+                                                <p className="font-xl">分析推理</p>
+                                                <p className="font-xl">结构化阐释</p>
+                                                
+                                                
+                                                
                                             </div>
                                             <div className="bg-red-50 rounded-lg p-4 text-center border border-red-200 hover:bg-red-100 transition-colors">
-                                                <p className="font-semibold text-red-700 mb-4">图文题</p>
-                                                <p className="font-xl">因果推理显性化</p>
-                                                <p className="font-xl">要素结构化提炼</p>
-                                                <p className="font-xl">迷惑项过滤</p>
+                                                <p className="font-semibold text-red-700 mb-4">图文简答题</p>
+                                                <p className="font-xl">图像识别</p>
+                                                <p className="font-xl">跨模态整合</p>
+                                                <p className="font-xl">证据链构建</p>
+                                                
+                                                
+                                                
                                             </div>
 
                                         </div>
@@ -398,11 +396,9 @@ export default function Home() {
                                 
                                 {/* 二、七大研究场景测评 */}
                                 <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">七大研究场景测评：契合相关研究实际需求</h3>
-                                    
-                                    <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                                        评测内容紧密围绕相关研究的核心环节，系统模拟六大关键研究场景：
-                                    </p>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+                                        七大适配场景，深度契合科研需求
+                                    </h3>
                                     
                                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                         <div className="bg-white rounded-lg p-5 border border-indigo-200 shadow-sm">
@@ -410,7 +406,7 @@ export default function Home() {
                                                 <span className="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">1</span>
                                                 检索
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 评估信息定位与筛选能力。
                                             </p>
                                         </div>
@@ -420,7 +416,7 @@ export default function Home() {
                                                 <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">2</span>
                                                 翻译
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 测评对语言形式（如古今文、语种、风格等）进行准确转换并保持原意的能力。
                                             </p>
                                         </div>
@@ -430,7 +426,7 @@ export default function Home() {
                                                 <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">3</span>
                                                 语料/图像精准识读
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 考察对原始材料（文字、图像等）的准确释读与信息提取能力。
                                             </p>
                                         </div>
@@ -440,7 +436,7 @@ export default function Home() {
                                                 <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">4</span>
                                                 事实呈现
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 测评客观、清晰地陈述关键史实或信息的能力。
                                             </p>
                                         </div>
@@ -450,7 +446,7 @@ export default function Home() {
                                                 <span className="bg-yellow-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">5</span>
                                                 特征描述
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 要求识别并准确描述研究对象（文本、文物、现象等）的显著特点。
                                             </p>
                                         </div>
@@ -460,7 +456,7 @@ export default function Home() {
                                                 <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">6</span>
                                                 信度考据
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 评估对信息来源、证据可靠性的判断与考辨能力。
                                             </p>
                                         </div>
@@ -470,7 +466,7 @@ export default function Home() {
                                                 <span className="bg-teal-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-2">7</span>
                                                 分析推论
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-lg leading-relaxed">
                                                 综合考察基于证据进行逻辑推理、形成见解或提出假设的能力。
                                             </p>
                                         </div>
@@ -483,7 +479,7 @@ export default function Home() {
                         <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden" style={{backgroundImage: 'url(/data_preparation_flow.svg)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
                             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 bg-opacity-90">
                                 <h2 className="text-2xl font-bold text-white flex items-center">
-                                    测评集权威基础构建：专业化数据制备与权威审核体系
+                                    严循学术研究标准
                                 </h2>
                             </div>
                             <div className="p-8 bg-white bg-opacity-95">
@@ -496,45 +492,40 @@ export default function Home() {
 
                                 
                                 {/* 核心特色 */}
-                                <div className="grid md:grid-cols-2 gap-8">
+                                <div className="grid md:grid-cols-2 gap-6">
                                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
                                         <h3 className="text-xl font-bold text-indigo-800 mb-4 flex items-center">
-                                            <span className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">1</span>
-                                            知识来源权威化
+                                            数据源专业权威
                                         </h3>
-                                        <p className="text-gray-700 mb-4 leading-relaxed">
-                                            保证题目来源的可靠性与知识覆盖的广泛性
-                                        </p>
-                                        <div className="space-y-3">
-                                            <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-gray-700">基于专业研究文献与学术期刊</span>
+                                        
+                                        <div className="space-y-0 whitespace-nowrap">
+                                            <div className="flex items-center p-2">
+                                                <span className="text-gray-700">聚合多领域专业知识库，确保学科覆盖广泛且精准</span>
                                             </div>
-                                            <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-gray-700">依托相关领域权威数据库</span>
+                                            <div className="flex items-center p-2">
+                                                <span className="text-gray-700">建立规范的数据采集流程，保障数据来源权威可靠</span>
                                             </div>
-                                            <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-gray-700">整合考古报告与文物资料</span>
+                                            <div className="flex items-center p-2">
+                                                <span className="text-gray-700">遵循相关法律法规，确保数据采集合法合规</span>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6">
                                         <h3 className="text-xl font-bold text-emerald-800 mb-4 flex items-center">
-                                            <span className="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">2</span>
-                                            题目生产专业化
+                                            题目质量精准可靠
                                         </h3>
-                                        <p className="text-gray-700 mb-4 leading-relaxed">
-                                            多维度专业标注与严格质量控制体系
-                                        </p>
-                                        <div className="space-y-3">
-                                            <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-gray-700">专业人士对测评题进行多层标注</span>
+                                    
+                                        <div className="space-y-0 whitespace-nowrap">
+                                            
+                                            <div className="flex items-center p-2">
+                                                <span className="text-gray-700">领域专家开展深度标注，确保题目专业性与学科匹配度</span>
                                             </div>
-                                            <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-gray-700">18+标签维度细粒度把控测评题专业性</span>
+                                            <div className="flex items-center p-2">
+                                                <span className="text-gray-700">质检专家执行交叉审核，提升题目准确性与标准一致性</span>
                                             </div>
-                                            <div className="flex items-center bg-white rounded-lg p-3 shadow-sm">
-                                                <span className="text-gray-700">质检、验收双重复审机制确保测评题可靠性</span>
+                                            <div className="flex items-center p-2">
+                                                <span className="text-gray-700">质量管理团队实施动态抽查，优化测评集的科学性与可靠性</span>
                                             </div>
                                         </div>
                                     </div>
@@ -553,18 +544,19 @@ export default function Home() {
                                 {/* 图片和文字部分 */}
                                 <div className="grid lg:grid-cols-2 gap-8 mb-8">
                                     
-                                    {/* 右侧文字 */}
+                                    {/* 左侧文字 */}
                                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-                                        <p className="text-gray-700 leading-relaxed text-base">
+                                        <h4 className="text-lg font-bold text-blue-800 mb-3">题目</h4>
+                                        <p className="text-gray-700 leading-relaxed text-lg">
                                         {currentQuestion.question}
                                         </p>
                                     </div>
-                                    {/* 左侧图片 */}
+                                    {/* 右侧图片 */}
                                     <div className="bg-white shadow-sm">
                                         <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/qc_pics/${currentQuestion.image}`} alt="题目配图" className="w-full h-auto rounded-lg" width={500} height={400} />
                                         {/* 图片文字说明 */}
                                         <div className="p-4">
-                                            <p className="text-center text-gray-700 font-medium text-sm">
+                                            <p className="text-center text-gray-700 font-medium text-lg">
                                                 {currentQuestion.image_name}
                                             </p>
                                         </div>
@@ -576,7 +568,7 @@ export default function Home() {
                                 <div className="bg-gradient-to-br from-yellow-50 to-green-50 rounded-xl p-6 mb-6">
                                     <h4 className="text-lg font-bold text-green-800 mb-3">参考答案</h4>
                                     {currentQuestion.answer.map((item, index) => (
-                                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                                        <p key={index} className="text-gray-700 text-lg leading-relaxed">
                                             {item}
                                         </p>
                                     ))}
@@ -587,7 +579,7 @@ export default function Home() {
                                     <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-blue-800 mb-3">题目标签</h4>
                                         {currentQuestion.tags.map((tag, index) => (
-                                            <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                                            <p key={index} className="text-gray-700 text-lg leading-relaxed">
                                                 {tag}
                                             </p>
                                         ))}
@@ -597,7 +589,7 @@ export default function Home() {
                                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-orange-800 mb-3">参考文献</h4>
                                         {currentQuestion.reference.map((item, index) => (
-                                            <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                                            <p key={index} className="text-gray-700 text-lg leading-relaxed">
                                                 {item}
                                             </p>
                                         ))}
@@ -640,7 +632,7 @@ export default function Home() {
                                 {/* 题目内容 */}
                                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 mb-8">
                                     <h4 className="text-lg font-bold text-blue-800 mb-3">题目</h4>
-                                    <p className="text-gray-700 leading-relaxed text-base">
+                                    <p className="text-gray-700 leading-relaxed text-lg">
                                         {currentShortAnswerData.question}
                                     </p>
                                 </div>
@@ -648,7 +640,7 @@ export default function Home() {
                                 {/* 参考答案 */}
                                 <div className="bg-gradient-to-br from-yellow-50 to-green-50 rounded-xl p-6 mb-6">
                                     <h4 className="text-lg font-bold text-green-800 mb-3">参考答案</h4>
-                                    <div className="text-gray-700 text-sm leading-relaxed space-y-4">
+                                    <div className="text-gray-700 text-lg leading-relaxed space-y-4">
                                         {currentShortAnswerData.answer.map((paragraph, index) => (
                                             <p key={index}>{paragraph}</p>
                                         ))}
@@ -660,7 +652,7 @@ export default function Home() {
                                     {/* 标签信息 */}
                                     <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-blue-800 mb-3">题目标签</h4>
-                                        <div className="text-gray-700 text-sm leading-relaxed space-y-2">
+                                        <div className="text-gray-700 text-lg leading-relaxed space-y-2">
                                             {currentShortAnswerData.tags.map((tag, index) => (
                                                 <p key={index}>{tag}</p>
                                             ))}
@@ -670,7 +662,7 @@ export default function Home() {
                                     {/* 参考文献 */}
                                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-orange-800 mb-3">参考文献</h4>
-                                        <div className="text-gray-700 text-sm leading-relaxed space-y-2">
+                                        <div className="text-gray-700 text-lg leading-relaxed space-y-2">
                                             {currentShortAnswerData.reference.map((ref, index) => (
                                                 <p key={index}>{ref}</p>
                                             ))}
@@ -714,7 +706,7 @@ export default function Home() {
                                 {/* 题目内容 */}
                                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 mb-8">
                                     <h4 className="text-lg font-bold text-blue-800 mb-3">题目</h4>
-                                    <p className="text-gray-700 leading-relaxed text-base mb-6">
+                                    <p className="text-gray-700 leading-relaxed text-lg mb-6">
                                         {currentMultipleChoiceData.question}
                                     </p>
                                     
@@ -741,7 +733,7 @@ export default function Home() {
                                     {/* 标签信息 */}
                                     <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-blue-800 mb-3">题目标签</h4>
-                                        <div className="text-gray-700 text-sm leading-relaxed space-y-2">
+                                        <div className="text-gray-700 text-lg leading-relaxed space-y-2">
                                             {currentMultipleChoiceData.tags.map((tag, index) => (
                                                 <p key={index}>{tag}</p>
                                             ))}
@@ -751,7 +743,7 @@ export default function Home() {
                                     {/* 参考文献 */}
                                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-orange-800 mb-3">参考文献</h4>
-                                        <div className="text-gray-700 text-sm leading-relaxed space-y-2">
+                                        <div className="text-gray-700 text-lg leading-relaxed space-y-2">
                                             {currentMultipleChoiceData.reference.map((ref, index) => (
                                                 <p key={index}>{ref}</p>
                                             ))}
@@ -795,7 +787,7 @@ export default function Home() {
                                 {/* 题目内容 */}
                                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 mb-8">
                                     <h4 className="text-lg font-bold text-blue-800 mb-3">题目</h4>
-                                    <p className="text-gray-700 leading-relaxed text-base">
+                                    <p className="text-gray-700 leading-relaxed text-lg">
                                         {currentTrueFalseData.question}
                                     </p>
                                 </div>
@@ -813,17 +805,17 @@ export default function Home() {
                                     {/* 标签信息 */}
                                     <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-blue-800 mb-3">题目标签</h4>
-                                        <div className="text-gray-700 text-sm leading-relaxed space-y-2">
-                                            <p>（1）学科领域：{currentTrueFalseData.tags.subject.join("；")}</p>
-                                            <p>（2）历史分期：{currentTrueFalseData.tags.period}</p>
-                                            <p>（3）核心目的：{currentTrueFalseData.tags.purpose}</p>
+                                        <div className="text-gray-700 text-lg leading-relaxed space-y-2">
+                                            <p>学科领域：{currentTrueFalseData.tags.subject.join("；")}</p>
+                                            <p>历史分期：{currentTrueFalseData.tags.period}</p>
+                                            <p>核心目的：{currentTrueFalseData.tags.purpose}</p>
                                         </div>
                                     </div>
                                     
                                     {/* 参考文献 */}
                                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6">
                                         <h4 className="text-lg font-bold text-orange-800 mb-3">参考文献</h4>
-                                        <div className="text-gray-700 text-sm leading-relaxed space-y-2">
+                                        <div className="text-gray-700 text-lg leading-relaxed space-y-2">
                                             {currentTrueFalseData.references.map((ref, index) => (
                                                 <p key={index}>{ref}</p>
                                             ))}
