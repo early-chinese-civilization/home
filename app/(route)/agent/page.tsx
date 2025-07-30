@@ -22,7 +22,7 @@ export default function Home() {
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-green-900 via-purple-900 to-indigo-900 bg-clip-text text-transparent mb-6">
                         早期中华文明智能体平台
                     </h1>
-                    <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                    <p className="text-xl text-gray-800 max-w-4xl mx-auto leading-relaxed">
                         ECC Agent
                     </p>
                 </div>
@@ -33,22 +33,29 @@ export default function Home() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                             {/* Left side - Content sections */}
                             <div className="space-y-6">
-                                {/* Header section */}
-                                <div className="mb-8 pl-2">
-                                    <h2 className="text-4xl lg:text-2xl font-bold mb-4 leading-tight">平台简介</h2>
-                                </div>
+                                
 
                                 {/* Content sections */}
-                                <div className="space-y-6 text-gray-700 leading-relaxed">
+                                <div className="space-y-6 text-gray-800 leading-relaxed">
                                     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                                        <div className="flex items-start space-x-4">
-                                            <p className="text-base lg:text-lg text-gray-800 font-medium">
+                                        {/* Header section */}
+                                        <div className="mb-8 pl-4">
+                                            <h2 className="text-4xl lg:text-2xl font-bold mb-4 leading-tight">平台简介</h2>
+                                        </div>
+                                        <div className="text-base lg:text-lg text-gray-800 font-medium ">
+                                            <p className="m-4 mb-16 pt-4">
                                                 ECC Agent 是专为早期中华文明研究打造的多学科、多场景人工智能代理体系，集成持续对话、任务拆解、多轮推理与自主规划等关键能力，能够实现精准理解与智能响应。
+                                            </p>
+                                            <p className="m-4 mb-16">
+                                                通过构建可追溯、可验证的知识生成机制，ECC Agent 确保所有输出均基于可靠的信息来源与完整的证据链，切实满足考古、历史、古文字等领域对结果可信度与可解释性的专业要求。
+                                            </p>
+                                            <p className="m-4 mb-20">
+                                                作为一个开放型智能体系统，ECC Agent 同时赋能教育、科研及大文化产业，广泛应用于学术研究辅助、教学资源生成、公共知识服务与文化创意开发等场景。
                                             </p>
                                         </div>
                                     </div>
 
-                                    <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                                    {/* <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                                         <div className="flex items-start space-x-4">
                                             <p className="text-base lg:text-lg text-gray-800 font-medium">
                                                 通过构建可追溯、可验证的知识生成机制，ECC Agent 确保所有输出均基于可靠的信息来源与完整的证据链，切实满足考古、历史、古文字等领域对结果可信度与可解释性的专业要求。
@@ -62,7 +69,7 @@ export default function Home() {
                                                 作为一个开放型智能体系统，ECC Agent 同时赋能教育、科研及大文化产业，广泛应用于学术研究辅助、教学资源生成、公共知识服务与文化创意开发等场景。
                                             </p>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
@@ -83,7 +90,7 @@ export default function Home() {
                                 {/* Ring Container */}
                                 <div className="relative text-center flex-1 flex items-center justify-center">
                                     {/* 3D Ring Architecture with Enhanced Text Effects */}
-                                    <div className="relative w-96 h-96">
+                                    <div className="relative w-84 h-84">
                                         {/* Outer ring - 第一层：接口层 */}
                                         <div className="absolute inset-0 rounded-full border-4 border-blue-400/40" style={{
                                             background: 'conic-gradient(from 0deg, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.15), rgba(59, 130, 246, 0.15))',
@@ -99,7 +106,7 @@ export default function Home() {
                                                 </div>
                                             </div>
                                             
-                                            <div className="absolute bottom-18 -right-7 transform ">
+                                            <div className="absolute bottom-22 -right-7 transform ">
                                                 <div className="relative">
                                                     <span className="relative text-sm text-blue-200 font-bold drop-shadow-lg" style={{
                                                         textShadow: '0 0 10px rgba(59, 130, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
@@ -122,7 +129,7 @@ export default function Home() {
                                             boxShadow: '0 0 40px rgba(147, 51, 234, 0.5), inset 0 0 40px rgba(147, 51, 234, 0.2)'
                                         }}>
                                             {/* 3D Text Labels for Middle Ring */}
-                                            <div className="absolute bottom-14 -left-8">
+                                            <div className="absolute bottom-17 -left-8">
                                                 <div className="relative">
                                                     <span className="relative text-sm text-purple-200 font-bold drop-shadow-lg" style={{
                                                         textShadow: '0 0 10px rgba(147, 51, 234, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5)'
@@ -130,7 +137,7 @@ export default function Home() {
                                                 </div>
                                             </div>
                                             
-                                            <div className="absolute top-36 -right-16 transform">
+                                            <div className="absolute top-23 -right-14 transform">
                                                 <div className="relative">
                                                     <span className="absolute inset-0 text-sm text-purple-600/50 font-bold transform translate-x-1 translate-y-1 blur-sm">考古简报/报告撰写Agent</span>
                                                     <span className="relative text-sm text-purple-200 font-bold drop-shadow-lg" style={{
@@ -228,8 +235,8 @@ export default function Home() {
                                         <div className="grid grid-cols-2 gap-3">
                                             <div className="bg-gray-500/20 rounded p-3 border border-gray-400/30">
                                                 <div className="text-center">
-                                                    <div className="text-xs font-semibold text-gray-200 mb-1">数据基础</div>
-                                                    <div className="text-xs text-gray-300">数据提取 | 服务平台 | 安全审核平台</div>
+                                                        <div className="text-xs font-semibold text-blue-200 mb-1">数据基础</div>
+                                                        <div className="text-xs text-blue-300">数据提取 | 服务平台 | 安全审核平台</div>
                                                 </div>
                                             </div>
                                             <div className="bg-blue-500/20 rounded p-3 border border-blue-400/30">
@@ -247,10 +254,10 @@ export default function Home() {
                                         </div>
                                     </div>
                                     
-                                    {/* Bottom title */}
+                                    {/* Bottom title
                                     <div className="text-center mt-3">
-                                        <span className="text-xs text-gray-400 font-medium">ECC Agent 架构</span>
-                                    </div>
+                                        <span className="text-xs text-gray-800 font-medium">ECC Agent 架构</span>
+                                    </div> */}
                                 </div>
                             </div>
                             </div>
@@ -270,8 +277,13 @@ export default function Home() {
                         <div className="text-center mb-16">
                             <h2 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 bg-clip-text text-transparent mb-6 leading-tight">学科合作</h2>
                             <div className="max-w-3xl mx-auto">
-                                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                    ECC Agent依托复旦大学百年人文社科积淀，与众多机构共同研发具有体系科研研究场景的智能体。
+                                <p className="text-lg text-gray-800 leading-relaxed">
+                                    ECC Agent依托复旦大学百年人文社科积淀，
+                                    
+                                </p>
+                                <p className="text-lg text-gray-800 leading-relaxed mb-6">
+                                    
+                                    与众多机构共同研发具有体系科研研究场景的智能体。
                                 </p>
                                 <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
                             </div>
@@ -300,7 +312,7 @@ export default function Home() {
                             <div className="flex justify-end mb-4">
                                 <button 
                                     onClick={closeModal}
-                                    className="text-gray-400 hover:text-gray-600 text-2xl font-bold transition-colors"
+                                    className="text-gray-800 hover:text-gray-600 text-2xl font-bold transition-colors"
                                 >
                                     ×
                                 </button>
@@ -315,7 +327,7 @@ export default function Home() {
                             </div>
                             
                             {/* 内容 */}
-                            <div className="space-y-6 text-gray-700 leading-relaxed">
+                            <div className="space-y-6 text-gray-800 leading-relaxed">
                                 <p className="text-lg">
                                     ECC Agent坚持开放协作的发展理念，持续拓展跨学科、跨机构的合作网络。我们欢迎来自高校科研机构、博物馆、图书馆、档案馆等各类人文社科研究平台的深度参与，共同探索人工智能在人文学科研究中的创新应用。
                                 </p>
@@ -329,7 +341,7 @@ export default function Home() {
                                     <p className="text-lg mb-2">
                                         如果您希望了解合作详情，或有具体合作意向，欢迎联系我们：
                                     </p>
-                                    <div className="space-y-2 text-gray-700">
+                                    <div className="space-y-2 text-gray-800">
                                         <p>
                                             <span className="font-semibold">上海科学智能研究院：</span>
                                             <a href="mailto:sais@sais.com.cn" className="text-blue-600 hover:text-blue-800 transition-colors">

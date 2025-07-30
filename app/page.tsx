@@ -25,7 +25,7 @@ export default function Home() {
               <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent leading-tight">
                 多模态大模型
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-800 mb-8 leading-relaxed">
                 The world&apos;s first multimodal foundation model dedicated to early Chinese civilization.
               </p>
             </div>
@@ -52,18 +52,18 @@ export default function Home() {
                 <div className="space-y-6 ml-5">
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed text-lg">
+                    <p className="text-gray-800 leading-relaxed text-lg">
                       系统覆盖考古、文物、中国古代史、历史地理学、文献学、汉语言文字学、中国古代文学、中国少数民族语言文学等学科领域，整合甲骨金文、方志舆图等珍稀史料，实现多元史料交叉验证与综合阐释；                    </p>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed text-lg">
+                    <p className="text-gray-800 leading-relaxed text-lg">
                         全面融合文本、图像、音频、视频、空间地理信息等多维数据，打通异构信息的关联链路，推动多模态信息的深度交互与协同呈现；
                     </p>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed text-lg">
+                    <p className="text-gray-800 leading-relaxed text-lg">
                         深度嵌入人文社科研究范式，充分体现以语境还原为前提、以证据互证为路径、以多元诠释为目标的知识生产逻辑，注重多元视角的开放性解释与批判性反思的学术传统，开创智能化研究新模式。
                     </p>
                   </div>
@@ -77,7 +77,7 @@ export default function Home() {
       <section className="mb-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-4">核心产品</h2>
-          <p className="text-xl text-gray-600 leading-relaxed">探索早期中华文明的智能化研究工具</p>
+          <p className="text-xl text-gray-800 leading-relaxed">探索早期中华文明的智能化研究工具</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -90,7 +90,7 @@ export default function Home() {
         <section className="py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent mb-4">了解我们</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">携手共建人文智能研究的未来</p>
+            <p className="text-xl text-gray-800 leading-relaxed">携手共建人文智能研究的未来</p>
           </div>
           <div className="grid grid-cols-8 gap-8">
 
@@ -103,10 +103,10 @@ export default function Home() {
                         <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                       </div>
                     </Link>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       本项目由专家指导委员会领衔
                     </p>
-                    <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
                       由AI科学家、专业领域学者、工程技术人员联合开发
                     </p>
                   </div>
@@ -121,10 +121,10 @@ export default function Home() {
                         <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                       </div>
                     </Link>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       本项目是集体努力的成果
                     </p>
-                    <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
                       向所有参与人员致谢
                     </p>
                   </div>
@@ -141,10 +141,10 @@ export default function Home() {
                         
                       </div>
                     </Link>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       阅读我们基于本项目撰写的
                     </p>
-                    <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
                       专题研究
                     </p>
                   </div>
@@ -160,10 +160,10 @@ export default function Home() {
                           →</span>
                       </div>
                     </Link>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed mb-3 group-hover:text-gray-800 transition-colors">
                       成为我们的领域专家
                     </p>
-                    <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                    <p className="text-gray-800 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
                       共同引领人工智能在文明研究中的深度突破
                     </p>
                   </div>

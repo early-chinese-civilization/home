@@ -21,7 +21,7 @@ export default function Home() {
                     <div className="bg-white rounded-2xl shadow-xl border border-gray-200 mb-12 overflow-hidden">
                         <div className="p-8">
                             <div className="p-6 mb-8">
-                                <p className="text-lg text-gray-700 leading-relaxed">
+                                <p className="text-lg text-gray-800 leading-relaxed">
                                     面向早期中华文明研究的独特需求与技术瓶颈，打造符合中华文明价值观的可信赖智能研究基座，为人文社科领域提供坚实支撑。
                                 </p>
                             </div>
@@ -34,7 +34,7 @@ export default function Home() {
                                         <span className="bg-cyan-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">1</span>
                                         统一多模态架构
                                     </h3>
-                                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                    <p className="text-lg text-gray-800 leading-relaxed mb-4">
                                         模型基于统一的Diffusion Transformer架构，推出8B与72B两种参数规模，全面支持文本、图像、音频、视频、空间地理信息等五大模态的统一理解与生成。
                                     </p>
                                 </div>
@@ -45,7 +45,7 @@ export default function Home() {
                                         <span className="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">2</span>
                                         融入人文研究范式
                                     </h3>
-                                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                    <p className="text-lg text-gray-800 leading-relaxed mb-4">
                                         模型创新性提出MCTS-GRPO多模态强化训练框架，首次将人文学科研究范式深度融入大模型训练，赋予模型遵循人文学科范式的严谨推演能力，确保大模型知识生产契合人文学科的复杂性与批判性思维。
                                     </p>
                                 </div>
@@ -57,7 +57,7 @@ export default function Home() {
                                         <span className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">3</span>
                                         赋能学术研究革新
                                     </h3>
-                                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                    <p className="text-lg text-gray-800 leading-relaxed mb-4">
                                         多模态大模型具备极速检索、史料识读、精准翻译、分析推论等功能，可显著提升研究效率；其跨模态关联分析能力更有助于拓展研究维度、挖掘研究深度，最终实现学术研究的革命性提升。
                                     </p>
                                 </div>

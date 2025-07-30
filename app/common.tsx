@@ -4,7 +4,7 @@ import Link from "next/link";
 export function SidebarButton({ text, url }: { text: string, url: string }) {
     return (
         <Link className='
-      text-gray-700 hover:text-gray-900 text-lg font-medium 
+      text-gray-800 hover:text-gray-900 text-lg font-medium 
       hover:bg-white hover:text-black'
             href={`${url}`}>
             {text}
@@ -20,9 +20,9 @@ export function Nav() {
                 <div className="flex justify-between items-center">
                     {/* Logo and Site Name */}
                     <div className="flex items-center space-x-4">
-                        <Link href="/" className="text-gray-900 font-medium leading-tight">
-                            <div className="text-lg font-bold">早期中华文明多模态大模型</div>
-                            <div className="text-lg text-gray-600">Early Chinese Civilization Multimodal Model</div>
+                        <Link href="/" className="text-gray-800 font-medium leading-tight">
+                            <div className="text-base">早期中华文明多模态大模型</div>
+                            <div className="text-base">Early Chinese Civilization Multimodal Model</div>
                         </Link>
                     </div>
 
@@ -49,14 +49,14 @@ export function Nav() {
 export function Footer() {
     return (
         <>
-            <footer className="mt-2 bg-white text-sm text-gray-500 py-12 pt-10">
+            <footer className="mt-2 bg-white text-sm text-gray-800 py-12 pt-10">
                 <div className="flex flex-col items-center text-center space-y-2">
                     <p>© 2025 早期中华文明多模态大模型团队. 版权所有</p>
                     <div className="flex space-x-4">
                         <Link href="/privacy" className="text-blue-500 hover:text-blue-700">隐私政策</Link>
-                        <span className="text-gray-400">|</span>
+                        <span className="text-gray-800">|</span>
                         <Link href="/team" className="text-blue-500 hover:text-blue-700">了解团队</Link>
-                        <span className="text-gray-400">|</span>
+                        <span className="text-gray-800">|</span>
                         <Link href="https://www.sais.com.cn/recruitList" className="text-blue-500 hover:text-blue-700">加入我们</Link>
                     </div>
                 </div>
@@ -182,11 +182,11 @@ export function TextCard({ index }: { index: number }) {
                     <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></div>
                     <h3 className="text-xl font-bold text-gray-800">{data.title1}</h3>
                 </div>
-                <p className="text-base font-semibold mb-6 text-gray-700 leading-relaxed whitespace-nowrap">{data.title2}</p>
+                <p className="text-base font-semibold mb-6 text-gray-800 leading-relaxed whitespace-nowrap">{data.title2}</p>
 
                 {/* 上方文字区域 - 固定高度，超出显示省略号 */}
                 <div className="flex-1 overflow-hidden">
-                    <div className="text-lg text-gray-600 h-100 leading-relaxed">
+                    <div className="text-lg text-gray-800 h-100 leading-relaxed">
                         <p className="mb-2 whitespace-pre-line">{data.description.join('\n')}</p>
                     </div>
                 </div>
@@ -240,10 +240,10 @@ export function SidebarCard({ index, spanNumber }: { index: number, spanNumber: 
                         <div className="bg-gradient-to-r from-indigo-500 to-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <span className="text-white text-lg font-bold transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </div>
-                        <p className="text-gray-700 text-lg leading-relaxed group-hover:text-gray-800 transition-colors">
+                        <p className="text-gray-800 text-lg leading-relaxed group-hover:text-gray-800 transition-colors">
                             {card[1]}
                         </p>
-                        <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
+                        <p className="text-gray-800 text-lg leading-relaxed group-hover:text-gray-700 transition-colors">
                             {card[2]}
                         </p>
                     </div>

@@ -15,24 +15,24 @@ export default function Privacy() {
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-4">
                             隐私政策
                         </h1>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-gray-800">
                             我们重视并保护您的个人隐私
                         </p>
                         <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mt-4"></div>
                     </div>
 
                     {/* Content */}
-                    <div className="space-y-8 text-gray-700 leading-relaxed">
+                    <div className="space-y-8 text-gray-800 leading-relaxed">
                         {/* 更新时间 */}
                         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-400">
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-800">
                                 <strong>最后更新时间：</strong>2025年7月
                             </p>
                         </div>
 
                         {/* 引言 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">引言</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">引言</h2>
                             <p className="mb-4">
                                 早期中华文明多模态大模型团队（以下简称&quot;我们&quot;）深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则，保护您的个人信息：
                             </p>
@@ -48,7 +48,7 @@ export default function Privacy() {
 
                         {/* 信息收集 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">我们收集的信息</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">我们收集的信息</h2>
                             <div className="space-y-4">
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-800 mb-2">1. 您主动提供的信息</h3>
@@ -74,7 +74,7 @@ export default function Privacy() {
 
                         {/* 信息使用 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">我们如何使用您的信息</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">我们如何使用您的信息</h2>
                             <p className="mb-4">我们收集和使用您的个人信息主要用于以下目的：</p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
                                 <li>提供、维护和改进我们的研究平台和服务</li>
@@ -89,7 +89,7 @@ export default function Privacy() {
 
                         {/* 信息共享 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">信息共享与披露</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">信息共享与披露</h2>
                             <p className="mb-4">我们承诺不会出售、出租或以其他方式商业化您的个人信息。我们仅在以下情况下可能共享您的信息：</p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
                                 <li><strong>获得您的明确同意：</strong>在获得您明确同意的情况下</li>
@@ -102,7 +102,7 @@ export default function Privacy() {
 
                         {/* 数据安全 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">数据安全</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">数据安全</h2>
                             <p className="mb-4">我们采取多种安全措施来保护您的个人信息：</p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
                                 <li>使用加密技术保护数据传输和存储</li>
@@ -116,7 +116,7 @@ export default function Privacy() {
 
                         {/* 您的权利 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">您的权利</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">您的权利</h2>
                             <p className="mb-4">根据相关法律法规，您享有以下权利：</p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
                                 <li><strong>知情权：</strong>了解我们处理您个人信息的情况</li>
@@ -133,7 +133,7 @@ export default function Privacy() {
 
                         {/* Cookie政策 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookie 和类似技术</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">Cookie 和类似技术</h2>
                             <p className="mb-4">
                                 我们使用 Cookie 和类似技术来改善您的浏览体验、分析网站使用情况并提供个性化内容。Cookie 是存储在您设备上的小型文本文件。
                             </p>
@@ -150,7 +150,7 @@ export default function Privacy() {
 
                         {/* 政策更新 */}
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">隐私政策更新</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4">隐私政策更新</h2>
                             <p className="mb-4">
                                 我们可能会不时更新本隐私政策。当我们对政策进行重大更改时，我们会通过网站公告或其他适当方式通知您。建议您定期查看本政策以了解最新信息。
                             </p>
@@ -162,7 +162,7 @@ export default function Privacy() {
                         {/* 联系我们 */}
                         <section>
                             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-400">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">联系我们</h2>
+                                <h2 className="text-2xl font-bold text-gray-800 mb-4">联系我们</h2>
                                 <p className="mb-4">
                                     如果您对本隐私政策有任何疑问、意见或建议，或需要行使您的个人信息权利，请通过以下方式联系我们：
                                 </p>
@@ -180,7 +180,7 @@ export default function Privacy() {
                                         </a>
                                     </p>
                                 </div>
-                                <p className="mt-4 text-sm text-gray-600">
+                                <p className="mt-4 text-sm text-gray-800">
                                     我们将在收到您的请求后尽快回复，通常不超过15个工作日。
                                 </p>
                             </div>
