@@ -7,7 +7,7 @@ export default function Home() {
         <>
             <Nav></Nav>
             
-            <div className="min-h-screen bg-gradient-to-br pt-25 from-blue-50 to-indigo-100">
+            <div className="min-h-screen pt-25">
                 <div className="max-w-5xl mx-auto px-6 py-12">
                     {/* 页面标题 */}
                     <div className="text-center mb-16">

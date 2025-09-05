@@ -61,13 +61,8 @@ export default function Home() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
-            {/* Floating decorative elements */}
-            <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute top-40 right-20 w-32 h-32 bg-purple-200/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-            <div className="absolute bottom-40 left-1/4 w-16 h-16 bg-indigo-200/40 rounded-full blur-xl animate-pulse delay-500"></div>
-            <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-cyan-200/30 rounded-full blur-xl animate-pulse delay-700"></div>
-            
+        <div className="min-h-screen relative overflow-hidden">
+
             <Nav></Nav>
 
             <div className="max-w-5xl mx-auto px-4 py-16 relative z-10">
@@ -81,9 +76,9 @@ export default function Home() {
                 </div>
                 
                 {/* 专家信息容器 */}
-                <div className="relative mb-20">
+                <div className="relative">
                     {/* 专家展示容器 */}
-                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
+                    <div className="bg-white/60 rounded-3xl p-12 shadow-xl border-2 border-gray-200/60">
                         {/* 专家网格 - 显示所有专家 */}
                         <div className="space-y-8">
                             {/* 第一行 - 2位负责人，居中显示在空隙中间 */}
@@ -198,7 +193,7 @@ export default function Home() {
                 <div className="mb-20 pt-20">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* AI科学家卡片 */}
-                            <div className="group bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+                            <div className="group bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200/60 backdrop-blur-sm">
                                 <div className="space-y-4">
                                     <div className="text-lg text-gray-800 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
                                         <div>朱思语</div>
@@ -213,7 +208,7 @@ export default function Home() {
 
                             
                             {/* 领域专家卡片 */}
-                            <div className="group bg-gradient-to-br from-white via-green-50 to-emerald-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+                            <div className="group bg-gradient-to-br from-white via-green-50 to-emerald-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200/60 backdrop-blur-sm">
                                 <div className="space-y-4">
                                     <div className="text-lg text-gray-800 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
                                         <div>刘　钊</div>
@@ -230,7 +225,7 @@ export default function Home() {
                             </div>
 
                             {/* 工程团队卡片 */}
-                            <div className="group bg-gradient-to-br from-white via-orange-50 to-amber-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+                            <div className="group bg-gradient-to-br from-white via-orange-50 to-amber-50 rounded-3xl p-8 h-80 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200/60 backdrop-blur-sm">
                                 <div className="space-y-4">
                                     <div className="text-lg text-gray-800 grid grid-cols-2 gap-x-6 gap-y-1 justify-items-center">
                                         <div>张兴盟</div>
@@ -250,7 +245,7 @@ export default function Home() {
                 
                 {/* 其他贡献者部分 */}
                 <div id="contributors" className="text-center">
-                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/20">
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 shadow-xl border-2 border-gray-200/60">
                         <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent mb-6">其他贡献者</h2>
                         <p className="text-lg text-gray-800 mb-12 leading-relaxed">致敬携手共进的协作伙伴</p>
                         
