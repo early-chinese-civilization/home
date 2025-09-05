@@ -3,6 +3,64 @@ import { Footer, Nav } from "@/app/common";
 import Image from "next/image";
 import { useState } from "react";
 
+// 定义模型数据类型
+interface BaseModel {
+    modelName: string;
+}
+
+interface ComprehensiveModel extends BaseModel {
+    multipleChoice: string;
+    trueFalse: string;
+    shortAnswer: string;
+}
+
+interface KnowledgeModel extends BaseModel {
+    archaeology: string;
+    culturalRelics: string;
+    history: string;
+    historicalGeography: string;
+    historicalDocuments: string;
+    classicalLiterature: string;
+    chineseLanguage: string;
+    ancientLiterature: string;
+}
+
+interface ResearchScenarioModel extends BaseModel {
+    retrieval: string;
+    translation: string;
+    reading: string;
+    factPresentation: string;
+    featureDescription: string;
+    credibilityVerification: string;
+    analysisInference: string;
+}
+
+interface HistoricalPeriodModel extends BaseModel {
+    paleolithic: string;
+    neolithicXia: string;
+    shang: string;
+    westernZhou: string;
+    easternZhou: string;
+    qin: string;
+    westernHan: string;
+    afterWesternHan: string;
+}
+
+// interface ReasoningModel extends BaseModel {
+//     publishDate: string;
+//     status: string;
+//     statusColor: string;
+//     parameters: string;
+//     comprehensiveScore: number;
+//     historicalKnowledgeQA: number;
+//     historicalLanguageGeneration: number;
+//     complexHistoricalReasoning: number;
+//     historicalLanguageUnderstanding: number;
+//     historicalSafetyEthics: number;
+// }
+
+// type ModelData = ComprehensiveModel | KnowledgeModel | ResearchScenarioModel | HistoricalPeriodModel | ReasoningModel;
+
 export default function Home() {
     // 题目列表数据
     const questionList = [
@@ -197,169 +255,7 @@ export default function Home() {
         }
     ];
     
-    // 推理榜单数据（按复杂史学推理能力排序）
-    const reasoningLeaderboardData = [
-        {
-            modelName: "星火史学大模型",
-            publishDate: "2025/08/21",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "70B",
-            comprehensiveScore: 100.2,
-            historicalKnowledgeQA: 99.9,
-            historicalLanguageGeneration: 86.1,
-            complexHistoricalReasoning: 92.9,
-            historicalLanguageUnderstanding: 123.1,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "智谱史学大模型",
-            publishDate: "2025/07/30",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "32B",
-            comprehensiveScore: 99.6,
-            historicalKnowledgeQA: 98.8,
-            historicalLanguageGeneration: 85.2,
-            complexHistoricalReasoning: 92.1,
-            historicalLanguageUnderstanding: 123.1,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "通义史学大模型",
-            publishDate: "2025/08/09",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "70B",
-            comprehensiveScore: 99.8,
-            historicalKnowledgeQA: 99.2,
-            historicalLanguageGeneration: 85.7,
-            complexHistoricalReasoning: 92,
-            historicalLanguageUnderstanding: 123.1,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "清华史学大模型",
-            publishDate: "2025/07/15",
-            status: "闭源",
-            statusColor: "bg-red-100 text-red-800",
-            parameters: "未知",
-            comprehensiveScore: 98.9,
-            historicalKnowledgeQA: 98.1,
-            historicalLanguageGeneration: 84.8,
-            complexHistoricalReasoning: 91.5,
-            historicalLanguageUnderstanding: 122.8,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "北大史学大模型",
-            publishDate: "2025/06/28",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "13B",
-            comprehensiveScore: 97.5,
-            historicalKnowledgeQA: 97.2,
-            historicalLanguageGeneration: 83.9,
-            complexHistoricalReasoning: 90.8,
-            historicalLanguageUnderstanding: 121.5,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "复旦史学大模型",
-            publishDate: "2025/06/10",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "7B",
-            comprehensiveScore: 95.8,
-            historicalKnowledgeQA: 95.5,
-            historicalLanguageGeneration: 82.1,
-            complexHistoricalReasoning: 89.2,
-            historicalLanguageUnderstanding: 119.8,
-            historicalSafetyEthics: 10
-        }
-    ];
-    
-    // 生成榜单数据（按史学语言生成能力排序）
-    const generationLeaderboardData = [
-        {
-            modelName: "星火史学大模型",
-            publishDate: "2025/08/21",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "70B",
-            comprehensiveScore: 100.2,
-            historicalKnowledgeQA: 99.9,
-            historicalLanguageGeneration: 86.1,
-            complexHistoricalReasoning: 92.9,
-            historicalLanguageUnderstanding: 123.1,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "通义史学大模型",
-            publishDate: "2025/08/09",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "70B",
-            comprehensiveScore: 99.8,
-            historicalKnowledgeQA: 99.2,
-            historicalLanguageGeneration: 85.7,
-            complexHistoricalReasoning: 92,
-            historicalLanguageUnderstanding: 123.1,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "智谱史学大模型",
-            publishDate: "2025/07/30",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "32B",
-            comprehensiveScore: 99.6,
-            historicalKnowledgeQA: 98.8,
-            historicalLanguageGeneration: 85.2,
-            complexHistoricalReasoning: 92.1,
-            historicalLanguageUnderstanding: 123.1,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "清华史学大模型",
-            publishDate: "2025/07/15",
-            status: "闭源",
-            statusColor: "bg-red-100 text-red-800",
-            parameters: "未知",
-            comprehensiveScore: 98.9,
-            historicalKnowledgeQA: 98.1,
-            historicalLanguageGeneration: 84.8,
-            complexHistoricalReasoning: 91.5,
-            historicalLanguageUnderstanding: 122.8,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "北大史学大模型",
-            publishDate: "2025/06/28",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "13B",
-            comprehensiveScore: 97.5,
-            historicalKnowledgeQA: 97.2,
-            historicalLanguageGeneration: 83.9,
-            complexHistoricalReasoning: 90.8,
-            historicalLanguageUnderstanding: 121.5,
-            historicalSafetyEthics: 10
-        },
-        {
-            modelName: "复旦史学大模型",
-            publishDate: "2025/06/10",
-            status: "开源",
-            statusColor: "bg-green-100 text-green-800",
-            parameters: "7B",
-            comprehensiveScore: 95.8,
-            historicalKnowledgeQA: 95.5,
-            historicalLanguageGeneration: 82.1,
-            complexHistoricalReasoning: 89.2,
-            historicalLanguageUnderstanding: 119.8,
-            historicalSafetyEthics: 10
-        }
-    ];
+
     
     // 简答题榜单数据（按学科维度简答题得分排序）
     const shortAnswerLeaderboardData = [
@@ -1602,68 +1498,58 @@ export default function Home() {
                                                         </td>
                                                         {selectedLeaderboard === 'comprehensive' ? (
                                                              <>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).multipleChoice}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).trueFalse}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).shortAnswer}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).multipleChoice}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).trueFalse}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).shortAnswer}</td>
                                                              </>
                                                          ) : selectedLeaderboard === 'knowledge' ? (
                                                              <>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).archaeology}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).culturalRelics}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).history}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).historicalGeography}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).historicalDocuments}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).classicalLiterature}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).chineseLanguage}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).ancientLiterature}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).archaeology}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).culturalRelics}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).history}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalGeography}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalDocuments}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).classicalLiterature}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).chineseLanguage}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).ancientLiterature}</td>
                                                              </>
                                                          ) : selectedLeaderboard === 'shortAnswer' ? (
                                                              <>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).archaeology}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).culturalRelics}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).history}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).historicalGeography}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).historicalDocuments}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).classicalLiterature}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).chineseLanguage}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).ancientLiterature}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).archaeology}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).culturalRelics}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).history}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalGeography}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalDocuments}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).classicalLiterature}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).chineseLanguage}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).ancientLiterature}</td>
                                                              </>
                                                          ) : selectedLeaderboard === 'researchScenario' ? (
                                                              <>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).retrieval}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).translation}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).reading}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).factPresentation}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).featureDescription}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).credibilityVerification}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).analysisInference}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).retrieval}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).translation}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).reading}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).factPresentation}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).featureDescription}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).credibilityVerification}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).analysisInference}</td>
                                                              </>
                                                          ) : selectedLeaderboard === 'historicalPeriod' ? (
                                                              <>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).paleolithic}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).neolithicXia}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).shang}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).westernZhou}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).easternZhou}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).qin}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).westernHan}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as any).afterWesternHan}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).paleolithic}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).neolithicXia}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).shang}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).westernZhou}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).easternZhou}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).qin}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).westernHan}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).afterWesternHan}</td>
                                                              </>
                                                          ) : (
                                                              <>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).publishDate}</td>
-                                                                 <td className="px-6 py-4 text-center border border-gray-300">
-                                                                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${(model as any).statusColor}`}>
-                                                                         {(model as any).status}
-                                                                     </span>
-                                                                 </td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).parameters}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm font-medium text-gray-900 border border-gray-300">{(model as any).comprehensiveScore}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).historicalKnowledgeQA}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).historicalLanguageGeneration}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).complexHistoricalReasoning}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).historicalLanguageUnderstanding}</td>
-                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as any).historicalSafetyEthics}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as ComprehensiveModel).multipleChoice}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as ComprehensiveModel).trueFalse}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as ComprehensiveModel).shortAnswer}</td>
                                                              </>
                                                          )}
                                                     </tr>
