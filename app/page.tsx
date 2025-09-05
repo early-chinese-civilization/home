@@ -9,7 +9,7 @@ export default function Home() {
     <Nav></Nav>
     
     {/* Hero Background */}
-    <div className=" min-h-screen">
+    <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen">
       <main className="max-w-5xl mx-auto px-4 py-12 pt-24">
         {/* Hero Section */}
         <section className="mb-20 pt-12">
@@ -36,7 +36,7 @@ export default function Home() {
         </section>
   
         {/* Content Section */}
-          <div className="rounded-3xl p-12 shadow-xl border-white/50 mb-16">
+        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-white/50 mb-16">
           <div className="max-w-4xl">
             <h2 className="text-xl font-bold text-gray-800 mb-8 leading-relaxed text-justify">
                 早期中华文明多模态大模型（Early Chinese Civilization Multimodal Model）是全球首个聚焦早期中华文明的多模态大模型。 该模型积极响应习总书记关于&quot;加快建设文化强国&quot;、&quot;推动中华优秀传统文化创造性转化、创新性发展&quot;的重要指示，围绕&quot;中华文明起源、形成与早期发展&quot;这一重大课题，致力于通过多学科、多角度、多层次、全方位的探索，为早期中华文明研究开辟智能化新路径，为建设中华民族现代文明构筑坚实的数字基座。

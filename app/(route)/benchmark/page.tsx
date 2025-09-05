@@ -544,7 +544,7 @@ export default function Home() {
                 "学说比较：内黄亳邑说强调汤始居亳在豫北，与汤建国后亳都区分；《竹书纪年》侧重迁都地点名称，《世本》突出历史连续性。",
                 "阶段性结论：豫北亳邑说成立，盘庚迁殷是复居汤始居之亳，三者记录一致，体现商都地理延续性。"
             ],
-            tags: ["学科领域：中国古代史", "时代分期：商", "核心目的：分析推论"],
+            tags: [],
             reference: ["江林昌. 《商颂》与商汤之\"亳\"[J]. 历史研究,2000,(5): 38-48+190."]
         }
     ];
@@ -600,7 +600,7 @@ export default function Home() {
                 "D. 季姬的曾祖母"
             ],
             answer: "B",
-            tags: ["学科领域：中国古代史","时代分期：西周","核心目的：分析推论"],
+            tags: [""],
             reference: ["李晶. 《尔雅·释亲》王父王母考[J]. 历史研究,2016,(6): 173-180."]
         }
     ];
@@ -674,7 +674,7 @@ export default function Home() {
         <>
             <Nav></Nav>
 
-            <div className="min-h-screen pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-20">
                 {/* Hero Section */}
                 <div className="max-w-5xl mx-auto px-4 py-16">
                     <div className="text-center mb-16">
@@ -754,6 +754,9 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="p-8">
+              
+                                
+
                                 {/* 一、学科领域全覆盖 */}
                                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-10">
                                     <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
@@ -941,13 +944,13 @@ export default function Home() {
                                         </h3>
                                         
                                         <div className="space-y-0 whitespace-nowrap">
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">聚合多领域专业知识库，确保学科覆盖广泛且精准</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">建立规范的数据采集流程，保障数据来源权威可靠</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">遵循相关法律法规，确保数据采集合法合规</span>
                                             </div>
                                         </div>
@@ -960,13 +963,13 @@ export default function Home() {
                                     
                                         <div className="space-y-0 whitespace-nowrap">
                                             
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">领域专家开展深度标注，确保题目专业性与学科匹配度</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">质检专家执行交叉审核，提升题目准确性与标准一致性</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">质量管理团队实施动态抽查，优化测评集的科学性与可靠性</span>
                                             </div>
                                         </div>
