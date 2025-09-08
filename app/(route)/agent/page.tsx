@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <>
             <Nav></Nav>
-            <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-indigo-50 pt-40">
+            <div className="min-h-screen pt-40">
                 <div className="text-center mb-16">
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-green-900 via-purple-900 to-indigo-900 bg-clip-text text-transparent mb-6">
                         早期中华文明智能体平台
@@ -27,9 +27,9 @@ export default function Home() {
                     </p>
                 </div>
                 {/* Content Section */}
-                <div className="max-w-5xl pt-10 mx-auto px-4 py-16">
+                <div className="pt-10 px-4 max-w-5xl mx-auto">
                     {/* Unified Content Card */}
-                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl py-12 px-8 shadow-2xl border border-white/20">
+                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                             {/* Left side - Content sections */}
                             <div className="space-y-6">
