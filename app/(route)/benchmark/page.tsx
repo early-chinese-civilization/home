@@ -428,44 +428,44 @@ export default function Home() {
     const comprehensiveLeaderboardData = [
         {
             modelName: "deepseek-V3",
-            multipleChoice: "458/816 = 56.1%",
-            trueFalse: "1253/2304 = 54.4%",
+            multipleChoice: "56.1%",
+            trueFalse: "54.4%",
             shortAnswer: "66.89"
         },
         {
             modelName: "gpt-4o",
-            multipleChoice: "423/816 = 51.8%",
-            trueFalse: "820/2304 = 35.6%",
+            multipleChoice: "51.8%",
+            trueFalse: "35.6%",
             shortAnswer: "63.39"
         },
         {
             modelName: "gpt-4.1",
-            multipleChoice: "439/816 = 53.8%",
-            trueFalse: "854/2304 = 37.1%",
+            multipleChoice: "53.8%",
+            trueFalse: "37.1%",
             shortAnswer: "70.80"
         },
         {
             modelName: "o4-mini",
-            multipleChoice: "460/816 = 56.4%",
-            trueFalse: "1226/2304 = 53.2%",
+            multipleChoice: "56.4%",
+            trueFalse: "53.2%",
             shortAnswer: "60.28"
         },
         {
             modelName: "o4-mini-high",
-            multipleChoice: "418/816 = 51.2%",
-            trueFalse: "1192/2304 = 51.7%",
+            multipleChoice: "51.2%",
+            trueFalse: "51.7%",
             shortAnswer: "60.14"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct",
-            multipleChoice: "442/816 = 54.2%",
-            trueFalse: "1215/2304 = 52.7%",
+            multipleChoice: "54.2%",
+            trueFalse: "52.7%",
             shortAnswer: "65.84"
         },
         {
             modelName: "Ours",
-            multipleChoice: "516/816 = 63.2%",
-            trueFalse: "1658/2304 = 72.0%",
+            multipleChoice: "63.2%",
+            trueFalse: "72.0%",
             shortAnswer: "77.77"
         }
     ];
@@ -1412,55 +1412,55 @@ export default function Home() {
                                                     <>
                                                         <tr>
                                                             <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
-                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">考古<br/>(1687题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">文物<br/>(406题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史<br/>(495题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史地理<br/>(156题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史文献<br/>(200题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古典文献<br/>(46题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">汉语言文字<br/>(90题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古代文学<br/>(17题)</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">考古</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">文物</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史地理</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史文献</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古典文献</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">汉语言文字</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古代文学</th>
                                                         </tr>
                                                     </>
                                                 ) : selectedLeaderboard === 'shortAnswer' ? (
                                                     <>
                                                         <tr>
                                                             <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
-                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">考古<br/>(528题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">文物<br/>(81题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史<br/>(117题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史地理<br/>(78题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史文献<br/>(31题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古典文献<br/>(20题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">汉语言文字<br/>(62题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古代文学<br/>(2题)</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">考古</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">文物</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史地理</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史文献</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古典文献</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">汉语言文字</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古代文学</th>
                                                         </tr>
                                                     </>
                                                 ) : selectedLeaderboard === 'researchScenario' ? (
                                                     <>
                                                         <tr>
                                                             <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
-                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">检索<br/>(19题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">翻译<br/>(3题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">识读<br/>(38题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">事实呈现<br/>(245题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">特征描述<br/>(213题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">信度考据<br/>(18题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">分析推论<br/>(550题)</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">检索</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">翻译</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">识读</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">事实呈现</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">特征描述</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">信度考据</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">分析推论</th>
                                                         </tr>
                                                     </>
                                                 ) : selectedLeaderboard === 'historicalPeriod' ? (
                                                     <>
                                                         <tr>
                                                             <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
-                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">旧石器时代<br/>(96题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">新石器时代（含夏）<br/>(1268题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">商<br/>(432题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西周<br/>(208题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">东周<br/>(267题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">秦<br/>(81题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西汉<br/>(270题)</th>
-                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西汉之后<br/>(77题)</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">旧石器时代</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">新石器时代（含夏）</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">商</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西周</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">东周</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">秦</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西汉</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西汉之后</th>
                                                         </tr>
                                                     </>
                                                 ) : (
@@ -1469,9 +1469,9 @@ export default function Home() {
                                                             {selectedLeaderboard === 'comprehensive' ? (
                                                                 <>
                                                                     <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
-                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">选择题<br/>(816题)</th>
-                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">判断题<br/>(2304题)</th>
-                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">简答题<br/>(1019题)</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">选择题</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">判断题</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">简答题</th>
                                                                 </>
                                                             ) : (
                                                                 <>
