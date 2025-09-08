@@ -3,6 +3,64 @@ import { Footer, Nav } from "@/app/common";
 import Image from "next/image";
 import { useState } from "react";
 
+// 定义模型数据类型
+interface BaseModel {
+    modelName: string;
+}
+
+interface ComprehensiveModel extends BaseModel {
+    multipleChoice: string;
+    trueFalse: string;
+    shortAnswer: string;
+}
+
+interface KnowledgeModel extends BaseModel {
+    archaeology: string;
+    culturalRelics: string;
+    history: string;
+    historicalGeography: string;
+    historicalDocuments: string;
+    classicalLiterature: string;
+    chineseLanguage: string;
+    ancientLiterature: string;
+}
+
+interface ResearchScenarioModel extends BaseModel {
+    retrieval: string;
+    translation: string;
+    reading: string;
+    factPresentation: string;
+    featureDescription: string;
+    credibilityVerification: string;
+    analysisInference: string;
+}
+
+interface HistoricalPeriodModel extends BaseModel {
+    paleolithic: string;
+    neolithicXia: string;
+    shang: string;
+    westernZhou: string;
+    easternZhou: string;
+    qin: string;
+    westernHan: string;
+    afterWesternHan: string;
+}
+
+// interface ReasoningModel extends BaseModel {
+//     publishDate: string;
+//     status: string;
+//     statusColor: string;
+//     parameters: string;
+//     comprehensiveScore: number;
+//     historicalKnowledgeQA: number;
+//     historicalLanguageGeneration: number;
+//     complexHistoricalReasoning: number;
+//     historicalLanguageUnderstanding: number;
+//     historicalSafetyEthics: number;
+// }
+
+// type ModelData = ComprehensiveModel | KnowledgeModel | ResearchScenarioModel | HistoricalPeriodModel | ReasoningModel;
+
 export default function Home() {
     // 题目列表数据
     const questionList = [
@@ -34,6 +92,401 @@ export default function Home() {
             image_name: "闭口不透直榫与闭口不透半直榫"
         }
     ];
+
+    // 历史分期维度榜单数据（按选判正确率排序）
+    const historicalPeriodLeaderboardData = [
+        {
+            modelName: "DeepSeek-V3",
+            paleolithic: "54.13%",
+            neolithicXia: "53.44%",
+            shang: "55.99%",
+            westernZhou: "51.45%",
+            easternZhou: "58.22%",
+            qin: "60.36%",
+            westernHan: "56.86%",
+            afterWesternHan: "59.70%"
+        },
+        {
+            modelName: "gpt-4o",
+            paleolithic: "44.95%",
+            neolithicXia: "39.48%",
+            shang: "41.40%",
+            westernZhou: "44.82%",
+            easternZhou: "45.13%",
+            qin: "47.37%",
+            westernHan: "45.40%",
+            afterWesternHan: "39.20%"
+        },
+        {
+            modelName: "gpt-4.1",
+            paleolithic: "36.80%",
+            neolithicXia: "38.79%",
+            shang: "41.37%",
+            westernZhou: "44.49%",
+            easternZhou: "47.96%",
+            qin: "44.11%",
+            westernHan: "45.74%",
+            afterWesternHan: "37.00%"
+        },
+        {
+            modelName: "o4-mini",
+            paleolithic: "56.09%",
+            neolithicXia: "56.33%",
+            shang: "54.64%",
+            westernZhou: "53.75%",
+            easternZhou: "52.78%",
+            qin: "50.54%",
+            westernHan: "52.17%",
+            afterWesternHan: "54.20%"
+        },
+        {
+            modelName: "o4-mini-high",
+            paleolithic: "50.00%",
+            neolithicXia: "56.23%",
+            shang: "57.60%",
+            westernZhou: "58.00%",
+            easternZhou: "56.60%",
+            qin: "56.70%",
+            westernHan: "57.80%",
+            afterWesternHan: "54.60%"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct(有RAG)",
+            paleolithic: "79.55%",
+            neolithicXia: "69.86%",
+            shang: "66.15%",
+            westernZhou: "68.87%",
+            easternZhou: "66.37%",
+            qin: "78.58%",
+            westernHan: "72.37%",
+            afterWesternHan: "75.50%"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct",
+            paleolithic: "45.59%",
+            neolithicXia: "50.07%",
+            shang: "49.68%",
+            westernZhou: "52.31%",
+            easternZhou: "55.55%",
+            qin: "51.29%",
+            westernHan: "55.47%",
+            afterWesternHan: "51.40%"
+        }
+    ];
+    
+    // 知识榜单数据（按学科维度选择判断题正确率排序）
+    const knowledgeLeaderboardData = [
+        {
+            modelName: "DeepSeek-V3",
+            archaeology: "53.8%",
+            culturalRelics: "50.22%",
+            history: "64.41%",
+            historicalGeography: "54.47%",
+            historicalDocuments: "49.95%",
+            classicalLiterature: "50.00%",
+            chineseLanguage: "56.66%",
+            ancientLiterature: "47.10%"
+        },
+        {
+            modelName: "gpt-4o",
+            archaeology: "40.39%",
+            culturalRelics: "34.02%",
+            history: "43.83%",
+            historicalGeography: "41.67%",
+            historicalDocuments: "33.04%",
+            classicalLiterature: "34.80%",
+            chineseLanguage: "38.90%",
+            ancientLiterature: "35.30%"
+        },
+        {
+            modelName: "gpt-4.1",
+            archaeology: "41.36%",
+            culturalRelics: "39.43%",
+            history: "49.11%",
+            historicalGeography: "41.00%",
+            historicalDocuments: "31.54%",
+            classicalLiterature: "34.80%",
+            chineseLanguage: "35.53%",
+            ancientLiterature: "35.30%"
+        },
+        {
+            modelName: "o4-mini",
+            archaeology: "52.75%",
+            culturalRelics: "50.46%",
+            history: "61.04%",
+            historicalGeography: "55.13%",
+            historicalDocuments: "54.53%",
+            classicalLiterature: "52.20%",
+            chineseLanguage: "49.97%",
+            ancientLiterature: "47.10%"
+        },
+        {
+            modelName: "o4-mini-high",
+            archaeology: "50.64%",
+            culturalRelics: "45.49%",
+            history: "59.21%",
+            historicalGeography: "57.55%",
+            historicalDocuments: "47.46%",
+            classicalLiterature: "54.30%",
+            chineseLanguage: "50.85%",
+            ancientLiterature: "41.20%"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct(有RAG)",
+            archaeology: "64.09%",
+            culturalRelics: "70.42%",
+            history: "75.11%",
+            historicalGeography: "74.38%",
+            historicalDocuments: "66.47%",
+            classicalLiterature: "73.90%",
+            chineseLanguage: "65.53%",
+            ancientLiterature: "58.80%"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct",
+            archaeology: "51.85%",
+            culturalRelics: "53.93%",
+            history: "61.83%",
+            historicalGeography: "53.20%",
+            historicalDocuments: "50.55%",
+            classicalLiterature: "53.33%",
+            chineseLanguage: "55.94%",
+            ancientLiterature: "58.90%"
+        }
+    ];
+    
+
+    
+    // 简答题榜单数据（按学科维度简答题得分排序）
+    const shortAnswerLeaderboardData = [
+        {
+            modelName: "DeepSeek-V3",
+            archaeology: "59.97",
+            culturalRelics: "62.95",
+            history: "76.96",
+            historicalGeography: "73.45",
+            historicalDocuments: "80.97",
+            classicalLiterature: "78.50",
+            chineseLanguage: "76.26",
+            ancientLiterature: "90.00"
+        },
+        {
+            modelName: "gpt-4o",
+            archaeology: "58.91",
+            culturalRelics: "56.05",
+            history: "58.11",
+            historicalGeography: "74.22",
+            historicalDocuments: "62.58",
+            classicalLiterature: "54.00",
+            chineseLanguage: "56.26",
+            ancientLiterature: "40.00"
+        },
+        {
+            modelName: "gpt-4.1",
+            archaeology: "69.32",
+            culturalRelics: "65.68",
+            history: "78.17",
+            historicalGeography: "56.30",
+            historicalDocuments: "51.97",
+            classicalLiterature: "56.50",
+            chineseLanguage: "64.49",
+            ancientLiterature: "45.00"
+        },
+        {
+            modelName: "o4-mini",
+            archaeology: "60.75",
+            culturalRelics: "58.64",
+            history: "66.04",
+            historicalGeography: "63.37",
+            historicalDocuments: "59.06",
+            classicalLiterature: "56.00",
+            chineseLanguage: "61.95",
+            ancientLiterature: "45.00"
+        },
+        {
+            modelName: "o4-mini-high",
+            archaeology: "61.06",
+            culturalRelics: "61.48",
+            history: "58.36",
+            historicalGeography: "58.33",
+            historicalDocuments: "67.39",
+            classicalLiterature: "54.50",
+            chineseLanguage: "58.55",
+            ancientLiterature: "90.00"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct",
+            archaeology: "58.65",
+            culturalRelics: "57.51",
+            history: "75.18",
+            historicalGeography: "70.15",
+            historicalDocuments: "72.13",
+            classicalLiterature: "64.90",
+            chineseLanguage: "68.24",
+            ancientLiterature: "82.00"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct（有RAG）",
+            archaeology: "75.89",
+            culturalRelics: "80.55",
+            history: "81.11",
+            historicalGeography: "79.86",
+            historicalDocuments: "77.87",
+            classicalLiterature: "77.20",
+            chineseLanguage: "81.31",
+            ancientLiterature: "84.00"
+        }
+    ];
+
+    // 研究场景维度榜单数据（按选择正确率排序）
+    const researchScenarioLeaderboardData = [
+        {
+            modelName: "DeepSeek-V3",
+            retrieval: "47.80%",
+            translation: "33.30%",
+            reading: "52.64%",
+            factPresentation: "52.67%",
+            featureDescription: "45.64%",
+            credibilityVerification: "55.60%",
+            analysisInference: "60.12%"
+        },
+        {
+            modelName: "gpt-4o",
+            retrieval: "47.80%",
+            translation: "33.30%",
+            reading: "52.61%",
+            factPresentation: "47.77%",
+            featureDescription: "40.33%",
+            credibilityVerification: "44.40%",
+            analysisInference: "53.52%"
+        },
+        {
+            modelName: "gpt-4.1",
+            retrieval: "47.80%",
+            translation: "33.30%",
+            reading: "50.03%",
+            factPresentation: "45.28%",
+            featureDescription: "47.73%",
+            credibilityVerification: "50.00%",
+            analysisInference: "53.92%"
+        },
+        {
+            modelName: "o4-mini",
+            retrieval: "52.20%",
+            translation: "33.30%",
+            reading: "50.03%",
+            factPresentation: "52.62%",
+            featureDescription: "49.75%",
+            credibilityVerification: "44.40%",
+            analysisInference: "58.24%"
+        },
+        {
+            modelName: "o4-mini-high",
+            retrieval: "47.80%",
+            translation: "33.30%",
+            reading: "50.04%",
+            factPresentation: "44.91%",
+            featureDescription: "46.10%",
+            credibilityVerification: "38.90%",
+            analysisInference: "53.68%"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct(有RAG)",
+            retrieval: "54.90%",
+            translation: "100.00%",
+            reading: "54.15%",
+            factPresentation: "67.89%",
+            featureDescription: "49.41%",
+            credibilityVerification: "57.30%",
+            analysisInference: "66.98%"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct",
+            retrieval: "43.50%",
+            translation: "33.30%",
+            reading: "44.78%",
+            factPresentation: "48.41%",
+            featureDescription: "47.68%",
+            credibilityVerification: "55.60%",
+            analysisInference: "52.03%"
+        }
+    ];
+
+    // 当前选中的榜单类型
+    const [selectedLeaderboard, setSelectedLeaderboard] = useState('comprehensive');
+    
+    // 榜单类型配置
+    const leaderboardTypes = [
+        { id: 'comprehensive', name: '榜单汇总', description: '基于所有维度的综合评分' },
+        { id: 'knowledge', name: '学科维度-选择题', description: '基于史学知识问答能力' },
+        { id: 'shortAnswer', name: '学科维度-简答题', description: '基于学科维度简答题得分' },
+        { id: 'researchScenario', name: '研究场景维度-选择题', description: '基于研究场景维度选择正确率' },
+        { id: 'historicalPeriod', name: '历史分期维度-选择题', description: '基于历史分期维度选判正确率' }
+    ];
+    
+    // 综合榜单数据
+    const comprehensiveLeaderboardData = [
+        {
+            modelName: "deepseek-V3",
+            multipleChoice: "458/816 = 56.1%",
+            trueFalse: "1253/2304 = 54.4%",
+            shortAnswer: "66.89"
+        },
+        {
+            modelName: "gpt-4o",
+            multipleChoice: "423/816 = 51.8%",
+            trueFalse: "820/2304 = 35.6%",
+            shortAnswer: "63.39"
+        },
+        {
+            modelName: "gpt-4.1",
+            multipleChoice: "439/816 = 53.8%",
+            trueFalse: "854/2304 = 37.1%",
+            shortAnswer: "70.80"
+        },
+        {
+            modelName: "o4-mini",
+            multipleChoice: "460/816 = 56.4%",
+            trueFalse: "1226/2304 = 53.2%",
+            shortAnswer: "60.28"
+        },
+        {
+            modelName: "o4-mini-high",
+            multipleChoice: "418/816 = 51.2%",
+            trueFalse: "1192/2304 = 51.7%",
+            shortAnswer: "60.14"
+        },
+        {
+            modelName: "Qwen2.5-VL-72B-Instruct",
+            multipleChoice: "442/816 = 54.2%",
+            trueFalse: "1215/2304 = 52.7%",
+            shortAnswer: "65.84"
+        },
+        {
+            modelName: "Ours",
+            multipleChoice: "516/816 = 63.2%",
+            trueFalse: "1658/2304 = 72.0%",
+            shortAnswer: "77.77"
+        }
+    ];
+    
+    // 获取当前选中的榜单数据
+    const getCurrentLeaderboardData = () => {
+        switch (selectedLeaderboard) {
+            case 'knowledge':
+                return knowledgeLeaderboardData;
+            case 'shortAnswer':
+                return shortAnswerLeaderboardData;
+            case 'researchScenario':
+                return researchScenarioLeaderboardData;
+            case 'historicalPeriod':
+                return historicalPeriodLeaderboardData;
+            default:
+                return comprehensiveLeaderboardData;
+        }
+    };
+    
+    const currentLeaderboardData = getCurrentLeaderboardData();
 
     // 当前题目索引
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -91,7 +544,7 @@ export default function Home() {
                 "学说比较：内黄亳邑说强调汤始居亳在豫北，与汤建国后亳都区分；《竹书纪年》侧重迁都地点名称，《世本》突出历史连续性。",
                 "阶段性结论：豫北亳邑说成立，盘庚迁殷是复居汤始居之亳，三者记录一致，体现商都地理延续性。"
             ],
-            tags: ["学科领域：中国古代史", "时代分期：商", "核心目的：分析推论"],
+            tags: [],
             reference: ["江林昌. 《商颂》与商汤之\"亳\"[J]. 历史研究,2000,(5): 38-48+190."]
         }
     ];
@@ -147,7 +600,7 @@ export default function Home() {
                 "D. 季姬的曾祖母"
             ],
             answer: "B",
-            tags: ["学科领域：中国古代史","时代分期：西周","核心目的：分析推论"],
+            tags: [""],
             reference: ["李晶. 《尔雅·释亲》王父王母考[J]. 历史研究,2016,(6): 173-180."]
         }
     ];
@@ -221,7 +674,7 @@ export default function Home() {
         <>
             <Nav></Nav>
 
-            <div className="min-h-screen pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-20">
                 {/* Hero Section */}
                 <div className="max-w-5xl mx-auto px-4 py-16">
                     <div className="text-center mb-16">
@@ -301,6 +754,9 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="p-8">
+              
+                                
+
                                 {/* 一、学科领域全覆盖 */}
                                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-10">
                                     <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
@@ -488,13 +944,13 @@ export default function Home() {
                                         </h3>
                                         
                                         <div className="space-y-0 whitespace-nowrap">
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">聚合多领域专业知识库，确保学科覆盖广泛且精准</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">建立规范的数据采集流程，保障数据来源权威可靠</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">遵循相关法律法规，确保数据采集合法合规</span>
                                             </div>
                                         </div>
@@ -507,13 +963,13 @@ export default function Home() {
                                     
                                         <div className="space-y-0 whitespace-nowrap">
                                             
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">领域专家开展深度标注，确保题目专业性与学科匹配度</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">质检专家执行交叉审核，提升题目准确性与标准一致性</span>
                                             </div>
-                                            <div className="flex items-center p-2 pl-0">
+                                            <div className="flex items-center p-2">
                                                 <span className="text-gray-800">质量管理团队实施动态抽查，优化测评集的科学性与可靠性</span>
                                             </div>
                                         </div>
@@ -846,6 +1302,34 @@ export default function Home() {
                             </div>
                             <div className="p-8">
                                 <div className="grid md:grid-cols-3 gap-8">
+                                    {/* 测评榜单 */}
+                                    <div className="group relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                        <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                                            <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="mb-6">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-purple-800 mb-3">测评榜单</h3>
+                                            <p className="text-gray-800 leading-relaxed mb-6">
+                                                查看各模型在不同维度的测评排名，实时更新的性能对比和分析报告。
+                                            </p>
+                                        </div>
+                                        <div className="text-center">
+                                            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl font-semibold shadow-lg">
+                                                {/* <span className="mr-2">🏆</span> */}
+                                                <span>测评榜单</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    
                                     {/* 自测评数据下载 */}
                                     <div className="group relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                                         <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
@@ -866,7 +1350,7 @@ export default function Home() {
                                         </div>
                                         <div className="text-center">
                                             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all cursor-not-allowed opacity-60">
-                                                <span className="mr-2">📥</span>
+                                                {/* <span className="mr-2">📥</span> */}
                                                 <span>敬请期待</span>
                                             </div>
                                         </div>
@@ -892,37 +1376,196 @@ export default function Home() {
                                         </div>
                                         <div className="text-center">
                                             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all cursor-not-allowed opacity-60">
-                                                <span className="mr-2">📤</span>
+                                                {/* <span className="mr-2">📤</span> */}
                                                 <span>敬请期待</span>
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* 测评榜单 */}
-                                    <div className="group relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                                        <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
-                                            <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div className="mb-6">
-                                            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                </svg>
-                                            </div>
-                                            <h3 className="text-2xl font-bold text-purple-800 mb-3">测评榜单</h3>
-                                            <p className="text-gray-800 leading-relaxed mb-6">
-                                                查看各模型在不同维度的测评排名，实时更新的性能对比和分析报告。
-                                            </p>
-                                        </div>
-                                        <div className="text-center">
-                                            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl font-semibold shadow-lg group-hover:shadow-xl transition-all cursor-not-allowed opacity-60">
-                                                <span className="mr-2">🏆</span>
-                                                <span>敬请期待</span>
-                                            </div>
+                                </div>
+                            </div>
+                            <div className="p-8 pt-2">
+                                {/* 榜单内容 - 在测评功能模块内部展示 */}
+                                <div className="overflow-hidden">
+                                    <div className="py-4">
+                                        {/* <h3 className="text-xl font-bold mb-4">
+                                            史学大模型测评榜单
+                                        </h3> */}
+                                        {/* 榜单类型选择器 */}
+                                        <div className="flex flex-wrap gap-3 mb-4">
+                                            {leaderboardTypes.map((type) => (
+                                                <button
+                                                    key={type.id}
+                                                    onClick={() => setSelectedLeaderboard(type.id)}
+                                                    className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-200 ${
+                                                        selectedLeaderboard === type.id
+                                                            ? 'border-blue-500 bg-blue-50 text-blue-700'
+                                                            : 'border-gray-300 bg-white text-gray-700 hover:border-gray-400 hover:bg-gray-50'
+                                                    }`}
+                                                    title={type.description}
+                                                >
+                                                    {type.name}
+                                                </button>
+                                            ))}
                                         </div>
                                     </div>
+                                    <div className="overflow-x-auto">
+                                        <table className="w-full border-collapse">
+                                            <thead className="bg-gray-50">
+                                                {selectedLeaderboard === 'knowledge' ? (
+                                                    <>
+                                                        <tr>
+                                                            <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">考古<br/>(1687题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">文物<br/>(406题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史<br/>(495题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史地理<br/>(156题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史文献<br/>(200题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古典文献<br/>(46题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">汉语言文字<br/>(90题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古代文学<br/>(17题)</th>
+                                                        </tr>
+                                                    </>
+                                                ) : selectedLeaderboard === 'shortAnswer' ? (
+                                                    <>
+                                                        <tr>
+                                                            <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">考古<br/>(528题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">文物<br/>(81题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史<br/>(117题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史地理<br/>(78题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">历史文献<br/>(31题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古典文献<br/>(20题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">汉语言文字<br/>(62题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">古代文学<br/>(2题)</th>
+                                                        </tr>
+                                                    </>
+                                                ) : selectedLeaderboard === 'researchScenario' ? (
+                                                    <>
+                                                        <tr>
+                                                            <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">检索<br/>(19题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">翻译<br/>(3题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">识读<br/>(38题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">事实呈现<br/>(245题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">特征描述<br/>(213题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">信度考据<br/>(18题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">分析推论<br/>(550题)</th>
+                                                        </tr>
+                                                    </>
+                                                ) : selectedLeaderboard === 'historicalPeriod' ? (
+                                                    <>
+                                                        <tr>
+                                                            <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
+                                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">旧石器时代<br/>(96题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">新石器时代（含夏）<br/>(1268题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">商<br/>(432题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西周<br/>(208题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">东周<br/>(267题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">秦<br/>(81题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西汉<br/>(270题)</th>
+                                            <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">西汉之后<br/>(77题)</th>
+                                                        </tr>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <tr>
+                                                            {selectedLeaderboard === 'comprehensive' ? (
+                                                                <>
+                                                                    <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">选择题<br/>(816题)</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">判断题<br/>(2304题)</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300">简答题<br/>(1019题)</th>
+                                                                </>
+                                                            ) : (
+                                                                <>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">发布日期</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">类型</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">参数量</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">综合得分</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">史学知识问答</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">史学语言生成</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">复杂史学推理</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">史学语言理解</th>
+                                                                    <th className="px-6 py-2 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border border-gray-300">史学安全伦理</th>
+                                                                </>
+                                                            )}
+                                                        </tr>
+                                                     </>
+                                                 )}
+                                            </thead>
+                                            <tbody className="bg-white divide-y divide-gray-200">
+                                                {currentLeaderboardData.map((model, index) => (
+                                                    <tr key={index} className="hover:bg-gray-50 transition-colors">
+                                                        <td className="px-2 py-4 text-center border-t border-b border-gray-300 w-32">
+                                                            <div className="text-xs font-medium text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">{model.modelName}</div>
+                                                        </td>
+                                                        {selectedLeaderboard === 'comprehensive' ? (
+                                                             <>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).multipleChoice}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).trueFalse}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).shortAnswer}</td>
+                                                             </>
+                                                         ) : selectedLeaderboard === 'knowledge' ? (
+                                                             <>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).archaeology}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).culturalRelics}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).history}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalGeography}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalDocuments}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).classicalLiterature}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).chineseLanguage}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).ancientLiterature}</td>
+                                                             </>
+                                                         ) : selectedLeaderboard === 'shortAnswer' ? (
+                                                             <>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).archaeology}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).culturalRelics}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).history}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalGeography}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).historicalDocuments}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).classicalLiterature}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).chineseLanguage}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).ancientLiterature}</td>
+                                                             </>
+                                                         ) : selectedLeaderboard === 'researchScenario' ? (
+                                                             <>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).retrieval}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).translation}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).reading}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).factPresentation}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).featureDescription}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).credibilityVerification}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ResearchScenarioModel).analysisInference}</td>
+                                                             </>
+                                                         ) : selectedLeaderboard === 'historicalPeriod' ? (
+                                                             <>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).paleolithic}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).neolithicXia}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).shang}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).westernZhou}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).easternZhou}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).qin}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).westernHan}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as HistoricalPeriodModel).afterWesternHan}</td>
+                                                             </>
+                                                         ) : (
+                                                             <>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as ComprehensiveModel).multipleChoice}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as ComprehensiveModel).trueFalse}</td>
+                                                                 <td className="px-6 py-4 text-center text-sm text-gray-900 border border-gray-300">{(model as ComprehensiveModel).shortAnswer}</td>
+                                                             </>
+                                                         )}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {/* <div className="bg-gray-50 px-6 py-3">
+                                        <p className="text-sm text-gray-600">
+                                            <span className="font-medium">说明：</span>
+                                            榜单数据基于标准化测评体系，定期更新。选择题和判断题显示正确数/总数及百分比，简答题为平均得分。
+                                        </p>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
