@@ -93,322 +93,239 @@ export default function Home() {
         }
     ];
 
-    // 历史分期维度榜单数据（按选判正确率排序）
+    // 历史分期维度榜单数据
     const historicalPeriodLeaderboardData = [
         {
             modelName: "DeepSeek-V3",
-            paleolithic: "54.13%",
-            neolithicXia: "53.44%",
-            shang: "55.99%",
-            westernZhou: "51.45%",
-            easternZhou: "58.22%",
-            qin: "60.36%",
-            westernHan: "56.86%",
-            afterWesternHan: "59.70%"
+            paleolithic: "54.7",
+            neolithicXia: "53.7",
+            shang: "54.9",
+            westernZhou: "52.6",
+            easternZhou: "55.7",
+            qin: "58.0",
+            westernHan: "56.1",
+            afterWesternHan: "59.6"
         },
         {
             modelName: "gpt-4o",
-            paleolithic: "44.95%",
-            neolithicXia: "39.48%",
-            shang: "41.40%",
-            westernZhou: "44.82%",
-            easternZhou: "45.13%",
-            qin: "47.37%",
-            westernHan: "45.40%",
-            afterWesternHan: "39.20%"
+            paleolithic: "47.3",
+            neolithicXia: "45.1",
+            shang: "48.3",
+            westernZhou: "53.8",
+            easternZhou: "53.1",
+            qin: "58.3",
+            westernHan: "54.4",
+            afterWesternHan: "40.5"
         },
         {
             modelName: "gpt-4.1",
-            paleolithic: "36.80%",
-            neolithicXia: "38.79%",
-            shang: "41.37%",
-            westernZhou: "44.49%",
-            easternZhou: "47.96%",
-            qin: "44.11%",
-            westernHan: "45.74%",
-            afterWesternHan: "37.00%"
+            paleolithic: "42.1",
+            neolithicXia: "46.3",
+            shang: "49.7",
+            westernZhou: "56.3",
+            easternZhou: "57.6",
+            qin: "60.6",
+            westernHan: "57.4",
+            afterWesternHan: "38.4"
         },
         {
             modelName: "o4-mini",
-            paleolithic: "56.09%",
-            neolithicXia: "56.33%",
-            shang: "54.64%",
-            westernZhou: "53.75%",
-            easternZhou: "52.78%",
-            qin: "50.54%",
-            westernHan: "52.17%",
-            afterWesternHan: "54.20%"
+            paleolithic: "57.9",
+            neolithicXia: "59.1",
+            shang: "58.2",
+            westernZhou: "62.0",
+            easternZhou: "59.0",
+            qin: "61.4",
+            westernHan: "59.3",
+            afterWesternHan: "54.9"
         },
         {
             modelName: "o4-mini-high",
-            paleolithic: "50.00%",
-            neolithicXia: "56.23%",
-            shang: "57.60%",
-            westernZhou: "58.00%",
-            easternZhou: "56.60%",
-            qin: "56.70%",
-            westernHan: "57.80%",
-            afterWesternHan: "54.60%"
+            paleolithic: "52.8",
+            neolithicXia: "57.1",
+            shang: "58.4",
+            westernZhou: "59.7",
+            easternZhou: "57.2",
+            qin: "55.2",
+            westernHan: "55.3",
+            afterWesternHan: "54.3"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct(有RAG)",
-            paleolithic: "79.55%",
-            neolithicXia: "69.86%",
-            shang: "66.15%",
-            westernZhou: "68.87%",
-            easternZhou: "66.37%",
-            qin: "78.58%",
-            westernHan: "72.37%",
-            afterWesternHan: "75.50%"
+            paleolithic: "86.8",
+            neolithicXia: "68.9",
+            shang: "70.7",
+            westernZhou: "70.2",
+            easternZhou: "73.0",
+            qin: "72.3",
+            westernHan: "72.1",
+            afterWesternHan: "75.0"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct",
-            paleolithic: "45.59%",
-            neolithicXia: "50.07%",
-            shang: "49.68%",
-            westernZhou: "52.31%",
-            easternZhou: "55.55%",
-            qin: "51.29%",
-            westernHan: "55.47%",
-            afterWesternHan: "51.40%"
+            paleolithic: "48.0",
+            neolithicXia: "53.0",
+            shang: "52.9",
+            westernZhou: "57.5",
+            easternZhou: "57.6",
+            qin: "60.9",
+            westernHan: "60.5",
+            afterWesternHan: "52.1"
         }
     ];
     
-    // 知识榜单数据（按学科维度选择判断题正确率排序）
+    // 学科维度榜单数据
     const knowledgeLeaderboardData = [
         {
             modelName: "DeepSeek-V3",
-            archaeology: "53.8%",
-            culturalRelics: "50.22%",
-            history: "64.41%",
-            historicalGeography: "54.47%",
-            historicalDocuments: "49.95%",
-            classicalLiterature: "50.00%",
-            chineseLanguage: "56.66%",
-            ancientLiterature: "47.10%"
+            archaeology: "55.3",
+            culturalRelics: "52.3",
+            history: "66.8",
+            historicalGeography: "60.8",
+            historicalDocuments: "54.1",
+            classicalLiterature: "58.6",
+            chineseLanguage: "64.7",
+            ancientLiterature: "51.6"
         },
         {
             modelName: "gpt-4o",
-            archaeology: "40.39%",
-            culturalRelics: "34.02%",
-            history: "43.83%",
-            historicalGeography: "41.67%",
-            historicalDocuments: "33.04%",
-            classicalLiterature: "34.80%",
-            chineseLanguage: "38.90%",
-            ancientLiterature: "35.30%"
+            archaeology: "44.8",
+            culturalRelics: "37.7",
+            history: "46.6",
+            historicalGeography: "52.5",
+            historicalDocuments: "37.0",
+            classicalLiterature: "40.6",
+            chineseLanguage: "46.0",
+            ancientLiterature: "35.8"
         },
         {
             modelName: "gpt-4.1",
-            archaeology: "41.36%",
-            culturalRelics: "39.43%",
-            history: "49.11%",
-            historicalGeography: "41.00%",
-            historicalDocuments: "31.54%",
-            classicalLiterature: "34.80%",
-            chineseLanguage: "35.53%",
-            ancientLiterature: "35.30%"
+            archaeology: "48.0",
+            culturalRelics: "43.8",
+            history: "54.7",
+            historicalGeography: "46.1",
+            historicalDocuments: "34.3",
+            classicalLiterature: "41.4",
+            chineseLanguage: "47.3",
+            ancientLiterature: "36.3"
         },
         {
             modelName: "o4-mini",
-            archaeology: "52.75%",
-            culturalRelics: "50.46%",
-            history: "61.04%",
-            historicalGeography: "55.13%",
-            historicalDocuments: "54.53%",
-            classicalLiterature: "52.20%",
-            chineseLanguage: "49.97%",
-            ancientLiterature: "47.10%"
+            archaeology: "54.6",
+            culturalRelics: "51.8",
+            history: "62.0",
+            historicalGeography: "57.9",
+            historicalDocuments: "55.1",
+            classicalLiterature: "53.3",
+            chineseLanguage: "54.9",
+            ancientLiterature: "46.9"
         },
         {
             modelName: "o4-mini-high",
-            archaeology: "50.64%",
-            culturalRelics: "45.49%",
-            history: "59.21%",
-            historicalGeography: "57.55%",
-            historicalDocuments: "47.46%",
-            classicalLiterature: "54.30%",
-            chineseLanguage: "50.85%",
-            ancientLiterature: "41.20%"
+            archaeology: "53.1",
+            culturalRelics: "48.1",
+            history: "59.0",
+            historicalGeography: "57.8",
+            historicalDocuments: "50.1",
+            classicalLiterature: "54.4",
+            chineseLanguage: "54.0",
+            ancientLiterature: "46.3"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct(有RAG)",
-            archaeology: "64.09%",
-            culturalRelics: "70.42%",
-            history: "75.11%",
-            historicalGeography: "74.38%",
-            historicalDocuments: "66.47%",
-            classicalLiterature: "73.90%",
-            chineseLanguage: "65.53%",
-            ancientLiterature: "58.80%"
+            archaeology: "66.9",
+            culturalRelics: "72.1",
+            history: "76.3",
+            historicalGeography: "76.2",
+            historicalDocuments: "68.0",
+            classicalLiterature: "74.9",
+            chineseLanguage: "72.0",
+            ancientLiterature: "61.5"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct",
-            archaeology: "51.85%",
-            culturalRelics: "53.93%",
-            history: "61.83%",
-            historicalGeography: "53.20%",
-            historicalDocuments: "50.55%",
-            classicalLiterature: "53.33%",
-            chineseLanguage: "55.94%",
-            ancientLiterature: "58.90%"
-        }
-    ];
-    
-
-    
-    // 简答题榜单数据（按学科维度简答题得分排序）
-    const shortAnswerLeaderboardData = [
-        {
-            modelName: "DeepSeek-V3",
-            archaeology: "59.97",
-            culturalRelics: "62.95",
-            history: "76.96",
-            historicalGeography: "73.45",
-            historicalDocuments: "80.97",
-            classicalLiterature: "78.50",
-            chineseLanguage: "76.26",
-            ancientLiterature: "90.00"
-        },
-        {
-            modelName: "gpt-4o",
-            archaeology: "58.91",
-            culturalRelics: "56.05",
-            history: "58.11",
-            historicalGeography: "74.22",
-            historicalDocuments: "62.58",
-            classicalLiterature: "54.00",
-            chineseLanguage: "56.26",
-            ancientLiterature: "40.00"
-        },
-        {
-            modelName: "gpt-4.1",
-            archaeology: "69.32",
-            culturalRelics: "65.68",
-            history: "78.17",
-            historicalGeography: "56.30",
-            historicalDocuments: "51.97",
-            classicalLiterature: "56.50",
-            chineseLanguage: "64.49",
-            ancientLiterature: "45.00"
-        },
-        {
-            modelName: "o4-mini",
-            archaeology: "60.75",
-            culturalRelics: "58.64",
-            history: "66.04",
-            historicalGeography: "63.37",
-            historicalDocuments: "59.06",
-            classicalLiterature: "56.00",
-            chineseLanguage: "61.95",
-            ancientLiterature: "45.00"
-        },
-        {
-            modelName: "o4-mini-high",
-            archaeology: "61.06",
-            culturalRelics: "61.48",
-            history: "58.36",
-            historicalGeography: "58.33",
-            historicalDocuments: "67.39",
-            classicalLiterature: "54.50",
-            chineseLanguage: "58.55",
-            ancientLiterature: "90.00"
-        },
-        {
-            modelName: "Qwen2.5-VL-72B-Instruct",
-            archaeology: "58.65",
-            culturalRelics: "57.51",
-            history: "75.18",
-            historicalGeography: "70.15",
-            historicalDocuments: "72.13",
-            classicalLiterature: "64.90",
-            chineseLanguage: "68.24",
-            ancientLiterature: "82.00"
-        },
-        {
-            modelName: "Qwen2.5-VL-72B-Instruct（有RAG）",
-            archaeology: "75.89",
-            culturalRelics: "80.55",
-            history: "81.11",
-            historicalGeography: "79.86",
-            historicalDocuments: "77.87",
-            classicalLiterature: "77.20",
-            chineseLanguage: "81.31",
-            ancientLiterature: "84.00"
+            archaeology: "53.5",
+            culturalRelics: "54.5",
+            history: "64.4",
+            historicalGeography: "58.9",
+            historicalDocuments: "53.4",
+            classicalLiterature: "56.8",
+            chineseLanguage: "61.0",
+            ancientLiterature: "61.3"
         }
     ];
 
-    // 研究场景维度榜单数据（按选择正确率排序）
+    // 研究场景维度榜单数据
     const researchScenarioLeaderboardData = [
         {
             modelName: "DeepSeek-V3",
-            retrieval: "47.80%",
-            translation: "33.30%",
-            reading: "52.64%",
-            factPresentation: "52.67%",
-            featureDescription: "45.64%",
-            credibilityVerification: "55.60%",
-            analysisInference: "60.12%"
+            retrieval: "52.7",
+            translation: "33.3",
+            reading: "55.2",
+            factPresentation: "50.9",
+            featureDescription: "50.7",
+            credibilityVerification: "60.5",
+            analysisInference: "57.6"
         },
         {
             modelName: "gpt-4o",
-            retrieval: "47.80%",
-            translation: "33.30%",
-            reading: "52.61%",
-            factPresentation: "47.77%",
-            featureDescription: "40.33%",
-            credibilityVerification: "44.40%",
-            analysisInference: "53.52%"
+            retrieval: "55.8",
+            translation: "33.3",
+            reading: "52.4",
+            factPresentation: "54.5",
+            featureDescription: "54.1",
+            credibilityVerification: "67.6",
+            analysisInference: "61.7"
         },
         {
             modelName: "gpt-4.1",
-            retrieval: "47.80%",
-            translation: "33.30%",
-            reading: "50.03%",
-            factPresentation: "45.28%",
-            featureDescription: "47.73%",
-            credibilityVerification: "50.00%",
-            analysisInference: "53.92%"
+            retrieval: "58.6",
+            translation: "33.3",
+            reading: "53.9",
+            factPresentation: "56.9",
+            featureDescription: "61.6",
+            credibilityVerification: "73.2",
+            analysisInference: "65.6"
         },
         {
             modelName: "o4-mini",
-            retrieval: "52.20%",
-            translation: "33.30%",
-            reading: "50.03%",
-            factPresentation: "52.62%",
-            featureDescription: "49.75%",
-            credibilityVerification: "44.40%",
-            analysisInference: "58.24%"
+            retrieval: "60.1",
+            translation: "33.3",
+            reading: "48.9",
+            factPresentation: "57.1",
+            featureDescription: "60.3",
+            credibilityVerification: "70.4",
+            analysisInference: "66.2"
         },
         {
             modelName: "o4-mini-high",
-            retrieval: "47.80%",
-            translation: "33.30%",
-            reading: "50.04%",
-            factPresentation: "44.91%",
-            featureDescription: "46.10%",
-            credibilityVerification: "38.90%",
-            analysisInference: "53.68%"
+            retrieval: "46.9",
+            translation: "33.3",
+            reading: "48.8",
+            factPresentation: "48.9",
+            featureDescription: "55.3",
+            credibilityVerification: "50.1",
+            analysisInference: "57.6"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct(有RAG)",
-            retrieval: "54.90%",
-            translation: "100.00%",
-            reading: "54.15%",
-            factPresentation: "67.89%",
-            featureDescription: "49.41%",
-            credibilityVerification: "57.30%",
-            analysisInference: "66.98%"
+            retrieval: "62.4",
+            translation: "100.0",
+            reading: "65.3",
+            factPresentation: "70.4",
+            featureDescription: "63.5",
+            credibilityVerification: "67.8",
+            analysisInference: "69.9"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct",
-            retrieval: "43.50%",
-            translation: "33.30%",
-            reading: "44.78%",
-            factPresentation: "48.41%",
-            featureDescription: "47.68%",
-            credibilityVerification: "55.60%",
-            analysisInference: "52.03%"
+            retrieval: "55.5",
+            translation: "33.3",
+            reading: "49.5",
+            factPresentation: "54.4",
+            featureDescription: "55.7",
+            credibilityVerification: "69.1",
+            analysisInference: "59.9"
         }
     ];
 
@@ -417,66 +334,63 @@ export default function Home() {
     
     // 榜单类型配置
     const leaderboardTypes = [
-        { id: 'comprehensive', name: '榜单汇总', description: '基于所有维度的综合评分' },
-        { id: 'knowledge', name: '学科维度-选择题', description: '基于史学知识问答能力' },
-        { id: 'shortAnswer', name: '学科维度-简答题', description: '基于学科维度简答题得分' },
-        { id: 'researchScenario', name: '研究场景维度-选择题', description: '基于研究场景维度选择正确率' },
-        { id: 'historicalPeriod', name: '历史分期维度-选择题', description: '基于历史分期维度选判正确率' }
+        { id: 'comprehensive', name: '榜单评测', description: '基于所有维度的综合评分' },
+        { id: 'knowledgeScore', name: '学科维度', description: '基于史学知识问答能力' },
+        { id: 'researchScenario', name: '研究场景维度', description: '基于研究场景维度选择正确率' },
+        { id: 'historicalPeriod', name: '历史分期维度', description: '基于历史分期维度选判正确率' }
     ];
     
     // 综合榜单数据
     const comprehensiveLeaderboardData = [
         {
             modelName: "deepseek-V3",
-            multipleChoice: "56.1%",
-            trueFalse: "54.4%",
+            multipleChoice: "56.1",
+            trueFalse: "54.4",
             shortAnswer: "66.89"
         },
         {
             modelName: "gpt-4o",
-            multipleChoice: "51.8%",
-            trueFalse: "35.6%",
-            shortAnswer: "63.39"
+            multipleChoice: "51.8",
+            trueFalse: "35.6",
+            shortAnswer: "63.4"
         },
         {
             modelName: "gpt-4.1",
-            multipleChoice: "53.8%",
-            trueFalse: "37.1%",
+            multipleChoice: "53.8",
+            trueFalse: "37.1",
             shortAnswer: "70.80"
         },
         {
             modelName: "o4-mini",
-            multipleChoice: "56.4%",
-            trueFalse: "53.2%",
-            shortAnswer: "60.28"
+            multipleChoice: "56.4",
+            trueFalse: "53.2",
+            shortAnswer: "60.3"
         },
         {
             modelName: "o4-mini-high",
-            multipleChoice: "51.2%",
-            trueFalse: "51.7%",
-            shortAnswer: "60.14"
+            multipleChoice: "51.2",
+            trueFalse: "51.7",
+            shortAnswer: "60.1"
         },
         {
             modelName: "Qwen2.5-VL-72B-Instruct",
-            multipleChoice: "54.2%",
-            trueFalse: "52.7%",
-            shortAnswer: "65.84"
+            multipleChoice: "54.2",
+            trueFalse: "52.7",
+            shortAnswer: "65.8"
         },
         {
             modelName: "Ours",
-            multipleChoice: "63.2%",
-            trueFalse: "72.0%",
-            shortAnswer: "77.77"
+            multipleChoice: "63.28",
+            trueFalse: "72.0",
+            shortAnswer: "77.8"
         }
     ];
     
     // 获取当前选中的榜单数据
     const getCurrentLeaderboardData = () => {
         switch (selectedLeaderboard) {
-            case 'knowledge':
+            case 'knowledgeScore':
                 return knowledgeLeaderboardData;
-            case 'shortAnswer':
-                return shortAnswerLeaderboardData;
             case 'researchScenario':
                 return researchScenarioLeaderboardData;
             case 'historicalPeriod':
@@ -1408,7 +1322,7 @@ export default function Home() {
                                     <div className="overflow-x-auto">
                                         <table className="w-full border-collapse">
                                             <thead className="bg-gray-50">
-                                                {selectedLeaderboard === 'knowledge' ? (
+                                                {selectedLeaderboard === 'knowledgeScore' ? (
                                                     <>
                                                         <tr>
                                                             <th className="px-2 py-4 text-center text-sm font-medium text-gray-800 uppercase tracking-wider whitespace-nowrap border-t border-b border-gray-300 w-32">模型名称</th>
@@ -1491,7 +1405,7 @@ export default function Home() {
                                                  )}
                                             </thead>
                                             <tbody className="bg-white divide-y divide-gray-200">
-                                                {currentLeaderboardData.map((model, index) => (
+                                                {currentLeaderboardData.map((model: any, index: number) => (
                                                     <tr key={index} className="hover:bg-gray-50 transition-colors">
                                                         <td className="px-2 py-4 text-center border-t border-b border-gray-300 w-32">
                                                             <div className="text-xs font-medium text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">{model.modelName}</div>
@@ -1502,7 +1416,7 @@ export default function Home() {
                                                                  <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).trueFalse}</td>
                                                                  <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as ComprehensiveModel).shortAnswer}</td>
                                                              </>
-                                                         ) : selectedLeaderboard === 'knowledge' ? (
+                                                         ) : selectedLeaderboard === 'knowledgeScore' ? (
                                                              <>
                                                                  <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).archaeology}</td>
                                                                  <td className="px-6 py-4 text-center text-sm text-gray-900 border-t border-b border-gray-300">{(model as KnowledgeModel).culturalRelics}</td>
@@ -1557,12 +1471,12 @@ export default function Home() {
                                             </tbody>
                                         </table>
                                     </div>
-                                    {/* <div className="bg-gray-50 px-6 py-3">
+                                    <div className="bg-gray-50 px-6 py-3">
                                         <p className="text-sm text-gray-600">
                                             <span className="font-medium">说明：</span>
-                                            榜单数据基于标准化测评体系，定期更新。选择题和判断题显示正确数/总数及百分比，简答题为平均得分。
+                                            榜单数据为模型评测得分。
                                         </p>
-                                    </div> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
