@@ -350,7 +350,7 @@ export default function Home() {
             modelName: "deepseek-V3",
             multipleChoice: "56.1",
             trueFalse: "54.4",
-            shortAnswer: "66.89"
+            shortAnswer: "66.9"
         },
         {
             modelName: "gpt-4o",
@@ -362,7 +362,7 @@ export default function Home() {
             modelName: "gpt-4.1",
             multipleChoice: "53.8",
             trueFalse: "37.1",
-            shortAnswer: "70.80"
+            shortAnswer: "70.8"
         },
         {
             modelName: "o4-mini",
@@ -384,7 +384,7 @@ export default function Home() {
         },
         {
             modelName: "Ours",
-            multipleChoice: "63.28",
+            multipleChoice: "63.2",
             trueFalse: "72.0",
             shortAnswer: "77.8"
         }
@@ -1352,69 +1352,73 @@ export default function Home() {
                                                  )}
                                             </thead>
                                             <tbody className="bg-white divide-y divide-gray-100">
-                                                {currentLeaderboardData.map((model: LeaderboardModel, index: number) => (
-                                                    <tr key={index} className="hover:bg-gray-50 transition-colors">
-                                                        <td className="px-4 py-3 text-center">
-                                                            <div className="text-sm font-medium text-gray-900">{model.modelName}</div>
-                                                        </td>
-                                                        {selectedLeaderboard === 'comprehensive' ? (
-                                                             <>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ComprehensiveModel).multipleChoice}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ComprehensiveModel).trueFalse}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ComprehensiveModel).shortAnswer}</td>
-                                                             </>
-                                                         ) : selectedLeaderboard === 'knowledgeScore' ? (
-                                                             <>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).archaeology}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).culturalRelics}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).history}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).historicalGeography}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).historicalDocuments}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).classicalLiterature}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).chineseLanguage}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).ancientLiterature}</td>
-                                                             </>
-                                                         ) : selectedLeaderboard === 'shortAnswer' ? (
-                                                             <>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).archaeology}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).culturalRelics}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).history}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).historicalGeography}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).historicalDocuments}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).classicalLiterature}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).chineseLanguage}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as KnowledgeModel).ancientLiterature}</td>
-                                                             </>
-                                                         ) : selectedLeaderboard === 'researchScenario' ? (
-                                                             <>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).retrieval}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).translation}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).reading}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).factPresentation}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).featureDescription}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).credibilityVerification}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ResearchScenarioModel).analysisInference}</td>
-                                                             </>
-                                                         ) : selectedLeaderboard === 'historicalPeriod' ? (
-                                                             <>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).paleolithic}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).neolithicXia}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).shang}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).westernZhou}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).easternZhou}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).qin}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).westernHan}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as HistoricalPeriodModel).afterWesternHan}</td>
-                                                             </>
-                                                         ) : (
-                                                             <>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ComprehensiveModel).multipleChoice}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ComprehensiveModel).trueFalse}</td>
-                                                                 <td className="px-4 py-3 text-center text-sm text-gray-900">{(model as ComprehensiveModel).shortAnswer}</td>
-                                                             </>
-                                                         )}
-                                                    </tr>
-                                                ))}
+                                                {currentLeaderboardData.map((model: LeaderboardModel, index: number) => {
+                                                    const isOurs = model.modelName === 'Ours';
+                                                    const fontClass = isOurs ? 'font-bold text-black' : 'text-gray-900';
+                                                    return (
+                                                        <tr key={index} className="hover:bg-gray-50 transition-colors">
+                                                            <td className="px-4 py-3 text-center">
+                                                                <div className={`text-sm font-medium ${fontClass}`}>{model.modelName}</div>
+                                                            </td>
+                                                            {selectedLeaderboard === 'comprehensive' ? (
+                                                                 <>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ComprehensiveModel).multipleChoice}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ComprehensiveModel).trueFalse}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ComprehensiveModel).shortAnswer}</td>
+                                                                 </>
+                                                             ) : selectedLeaderboard === 'knowledgeScore' ? (
+                                                                 <>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).archaeology}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).culturalRelics}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).history}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).historicalGeography}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).historicalDocuments}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).classicalLiterature}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).chineseLanguage}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).ancientLiterature}</td>
+                                                                 </>
+                                                             ) : selectedLeaderboard === 'shortAnswer' ? (
+                                                                 <>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).archaeology}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).culturalRelics}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).history}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).historicalGeography}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).historicalDocuments}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).classicalLiterature}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).chineseLanguage}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as KnowledgeModel).ancientLiterature}</td>
+                                                                 </>
+                                                             ) : selectedLeaderboard === 'researchScenario' ? (
+                                                                 <>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).retrieval}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).translation}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).reading}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).factPresentation}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).featureDescription}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).credibilityVerification}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ResearchScenarioModel).analysisInference}</td>
+                                                                 </>
+                                                             ) : selectedLeaderboard === 'historicalPeriod' ? (
+                                                                 <>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).paleolithic}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).neolithicXia}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).shang}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).westernZhou}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).easternZhou}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).qin}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).westernHan}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as HistoricalPeriodModel).afterWesternHan}</td>
+                                                                 </>
+                                                             ) : (
+                                                                 <>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ComprehensiveModel).multipleChoice}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ComprehensiveModel).trueFalse}</td>
+                                                                     <td className={`px-4 py-3 text-center text-sm ${fontClass}`}>{(model as ComprehensiveModel).shortAnswer}</td>
+                                                                 </>
+                                                             )}
+                                                        </tr>
+                                                    );
+                                                })}
                                             </tbody>
                                         </table>
                                     </div>
